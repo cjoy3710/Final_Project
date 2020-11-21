@@ -12,14 +12,14 @@ export function AboutUsCard(props) {
 			<div className="card">
 				<img src="..." className="card-img-top" alt="..." />
 				<div className="card-body">
-					<h5 className="card-title">{props.us.name}</h5>
-					<p className="card-text">{props.us.background}</p>
+					<h5 className="card-title">Hello</h5>
+					<p className="card-text">Hello</p>
 				</div>
 			</div>
 		</div>
 	);
 }
 
-AboutUs.propTypes = {
-	us: PropTypes.object
-};
+// AboutUs.propTypes = {
+// 	us: PropTypes.object
+// };
