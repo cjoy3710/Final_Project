@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import rigoImage from "../../img/rigo-baby.jpg";
+
+import CDELogo from "../../img/CDE_Logo.png";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -14,12 +15,12 @@ export const Navbar = () => {
 		<ul className="navbar bg-transparent d-flex nav-menu">
 			<li className="navbar-brand nav-logo">
 				<Link to="/">
-					<img src={rigoImage} className="card-img" alt="..." />
+					<img src={CDELogo} className="card-img" alt="..." />
 				</Link>
 			</li>
 			<li className="nav-item">
-				<button type="button" className="btn btn-primary login-btn" variant="primary" onClick={handleShow}>
-					Login
+				<button type="button" className="btn login-btn" variant="primary" onClick={handleShow}>
+					Login / Sign-Up
 				</button>
 				<Modal show={show} onHide={handleClose}>
 					<Modal.Header closeButton>
