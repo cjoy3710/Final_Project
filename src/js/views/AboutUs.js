@@ -7,14 +7,10 @@ export function AboutUs() {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="row col-md-4 m-auto">
+		<div className="rows-md-4 m-auto">
 			{store.us.map((us, index) => (
 				<AboutUsCard key={index} us={us} />
 			))}
 		</div>
 	);
 }
-
-AboutUs.propTypes = {
-	us: PropTypes.object
-};

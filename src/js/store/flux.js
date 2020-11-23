@@ -7,14 +7,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background:
 						"Edward is an experienced sushi chef, working out of Sushi Sake Doral for the last 8 years. He is happily married and blessed with 3 children",
 					img: "white"
+				},
+				{
+					name: "Catherine Spitzer",
+					background: "Catherine is an award-winning opera singer, working out of Broward.",
+					img: "red"
 				}
 			]
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
 			getUs: () => {
 				return getStore().us;
 			},
