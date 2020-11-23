@@ -8,9 +8,13 @@ export function AboutUs() {
 
 	return (
 		<div className="row col-md-4 m-auto">
-			{store.us.map((events, index) => (
-				<AboutUsCard key={index} events={us} />
+			{store.us.map((us, index) => (
+				<AboutUsCard key={index} us={us} />
 			))}
 		</div>
 	);
 }
+
+AboutUs.propTypes = {
+	us: PropTypes.object
+};
