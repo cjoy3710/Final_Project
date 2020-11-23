@@ -32,6 +32,11 @@ export const Footer = () => (
 							About Us
 						</Link>
 					</li>
+					<li className="nav-item">
+						<Link className="nav-link" to="/aboutus">
+							Place Order
+						</Link>
+					</li>
 				</ul>
 			</div>
 		</nav>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import CDELogo from "../../img/CDE_Logo_2.png";
+import CDELogo from "../../img/CDE_Logo_2_small.jpg";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";

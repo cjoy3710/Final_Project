@@ -8,10 +8,10 @@
     margin-bottom: 0;
 }
 
-.nav-logo {
-    height: 200px;
-    margin-bottom: 12px;
-}
+// .nav-logo {
+//     height: 50px;
+//     margin-bottom: 12px;
+// }
 .login-btn {
   position: absolute;
   top: 12px;
@@ -20,8 +20,19 @@
   font-family:'Josefin Sans', sans-serif !important;
   
 }
+.img-responsive{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
+// .carousel-item{
+//     height: 100vh;
+//     min-height: 300px;
+//     background: no-repeat scroll center scroll;
+//     background-size: cover;
 
+// }
 
 .carousel-img{
     margin: auto;
