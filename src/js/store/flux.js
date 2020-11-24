@@ -1,3 +1,5 @@
+import rigoImage from "../../img/rigo-baby.jpg";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -6,12 +8,43 @@ const getState = ({ getStore, getActions, setStore }) => {
 					name: "Edward Mendieta",
 					background:
 						"Edward is an experienced sushi chef, working out of Sushi Sake Doral for the last 8 years. He is happily married and blessed with 3 children",
-					img: "white"
+					img: { rigoImage }
 				},
 				{
 					name: "Catherine Spitzer",
 					background: "Catherine is an award-winning opera singer, working out of Broward.",
 					img: "red"
+				},
+				{
+					name: "David Wimert",
+					background: "David is an oscar-winning film editor, working out of Miami.",
+					img: "orange"
+				}
+			],
+			menu: [
+				{
+					item: "Fillet Mignon",
+					price: "39"
+				},
+				{
+					item: "Fillet Mignon",
+					price: "39"
+				},
+				{
+					item: "Fillet Mignon",
+					price: "39"
+				},
+				{
+					item: "Fillet Mignon",
+					price: "39"
+				},
+				{
+					item: "Fillet Mignon",
+					price: "39"
+				},
+				{
+					item: "Fillet Mignon",
+					price: "39"
 				}
 			]
 		},

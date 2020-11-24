@@ -3,14 +3,12 @@ import PropTypes from "prop-types";
 import { AboutUsCard } from "./AboutUsCard";
 import { Context } from "../store/appContext";
 
-export function AboutUs() {
+export function Cart() {
 	const { store, actions } = useContext(Context);
 
 	return (
 		<div className="row">
-			{store.us.map((us, index) => (
-				<AboutUsCard key={index} us={us} />
-			))}
+			<h1>DO YOU UNDERSTAND THE WORDS THAT ARE COMING OUT OF MY MOUTH</h1>
 		</div>
 	);
 }
