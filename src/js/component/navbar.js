@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // import React from "react";
 // import { Link } from "react-router-dom";
 
@@ -16,7 +15,6 @@
 // 		</nav>
 // 	);
 // };
-=======
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -73,4 +71,3 @@ export const Navbar = () => {
 		</ul>
 	);
 };
->>>>>>> d006fe9d7e6105cad0751b5bc3c961933c5df6a1

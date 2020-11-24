@@ -3,7 +3,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import FoodImg3 from "../../img/food-img-3.jpg";
 import FoodImg4 from "../../img/food-img-4.jpg";
 import FoodImg5 from "../../img/food-img-5.jpg";
-import "../../styles/home.scss";
+import "../../styles/index.scss";
 import Carousel from "react-bootstrap/Carousel";
 
 export const Home = () => (
