@@ -12,7 +12,7 @@ import { Navbar } from "./component/navbar";
 
 // import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { Navbar2 } from "./component/Navbar2";
+import { Navbar3 } from "./component/Navbar3";
 
 //create your first component
 const Layout = () => {
@@ -24,7 +24,7 @@ const Layout = () => {
 		<div className="d-flex flex-column">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar2 />
+					<Navbar3 />
 					<Switch>
 						<Route exact path="/">
 							<Home />
