@@ -1,3 +1,5 @@
+
+
 .card{
     width: 18rem;
 }
@@ -24,6 +26,7 @@
     max-width: 100%;
     height: auto;
     display: block;
+    margin:auto;
 }
 
 // .carousel-item{
@@ -34,8 +37,8 @@
 
 // }
 
-.carousel-img{
-    margin: auto;
+.nav-item, .nav-link{
+    font-family:'Josefin Sans', sans-serif !important;
 }
 
 body{
