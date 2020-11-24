@@ -12,6 +12,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 					name: "Catherine Spitzer",
 					background: "Catherine is an award-winning opera singer, working out of Broward.",
 					img: "red"
+				},
+				{
+					name: "David Wimert",
+					background: "David is an oscar-winning film editor, working out of Miami.",
+					img: "orange"
 				}
 			]
 		},
