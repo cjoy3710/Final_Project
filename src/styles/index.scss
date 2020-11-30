@@ -14,13 +14,24 @@
 //     height: 50px;
 //     margin-bottom: 12px;
 // }
-.login-btn {
+
+.menu-bar {
   position: absolute;
-  top: 12px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   color: #607D8B;
   font-family:'Josefin Sans', sans-serif !important;
   
+}
+.menu-bar:hover {
+    color:white !important;
+}
+
+.menu-items{
+     color: #607D8B !important;
+    //  top: 12px;
+     
+
 }
 .img-responsive{
     max-width: 100%;
@@ -37,11 +48,16 @@
 
 // }
 
-.nav-item, .nav-link{
+.nav-link{
     font-family:'Josefin Sans', sans-serif !important;
+    color: #607D8B !important;
 }
 
 body{
     background-color: black;
     
+}
+
+.about-items{
+    margin: 20;
 }
