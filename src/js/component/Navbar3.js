@@ -6,14 +6,11 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { useAuth0 } from "@auth0/auth0-react";
-import LogoutButton from "./logoutButton";
 
 export const Navbar3 = () => {
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
-	const { loginWithRedirect } = useAuth0();
 
 	return (
 		<Navbar collapseOnSelect expand="lg" variant="dark" className="">
@@ -38,10 +35,10 @@ export const Navbar3 = () => {
 					{/* <Nav.Link eventKey={2} href="#memes">
 						Login / Sign-up
 					</Nav.Link> */}
-					<Nav.Link type="button" className=" login-btn" onClick={(handleShow, loginWithRedirect)}>
+					<Nav.Link type="button" className=" login-btn" onClick={handleShow}>
 						Login / Sign-Up
 					</Nav.Link>
-					<LogoutButton />
+
 					<Modal show={show} onHide={handleClose}>
 						<Modal.Header closeButton>
 							<Modal.Title>Login Here</Modal.Title>
