@@ -23,9 +23,9 @@
   font-family:'Josefin Sans', sans-serif !important;
   
 }
-.menu-bar:hover {
-    color:white !important;
-}
+// .menu-items:hover {
+//     color:white !important;
+// }
 
 .menu-items{
      color: #607D8B !important;
@@ -33,6 +33,13 @@
      
 
 }
+
+// .logout-button {
+//     background: none!important;
+//   border: none;
+//   padding: 0!important;
+//    color: #607D8B !important;
+// }
 .img-responsive{
     max-width: 100%;
     height: auto;
@@ -58,6 +65,11 @@ body{
     
 }
 
-.about-items{
-    margin: 20;
+
+.card-deck{
+    display: flex;
+    margin: auto;
+    height: 250px;
+    
+    
 }

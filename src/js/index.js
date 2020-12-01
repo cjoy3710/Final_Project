@@ -1,6 +1,7 @@
 //import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
+import { Auth0Provider } from "@auth0/auth0-react";
 
 //include bootstrap npm library into the bundle
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -12,4 +13,8 @@ import "../styles/index.scss";
 import Layout from "./layout";
 
 //render your react application
-ReactDOM.render(<Layout />, document.querySelector("#app"));
+ReactDOM.render(
+	<Layout />,
+
+	document.querySelector("#app")
+);

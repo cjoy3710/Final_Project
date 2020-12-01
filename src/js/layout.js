@@ -8,7 +8,7 @@ import { Cart } from "./views/Cart";
 import { AboutUs } from "./views/AboutUs";
 // import { Single } from "./views/single";
 import injectContext from "./store/appContext";
-import { Navbar } from "./component/navbar";
+// import { Navbar } from "./component/navbar";
 
 // import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";

@@ -39,6 +39,7 @@ export const Navbar3 = () => {
 					<Nav.Link type="button" className=" login-btn" onClick={handleShow}>
 						Login / Sign-Up
 					</Nav.Link>
+
 					<Modal show={show} onHide={handleClose}>
 						<Modal.Header closeButton>
 							<Modal.Title>Login Here</Modal.Title>
