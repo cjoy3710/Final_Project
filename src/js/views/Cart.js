@@ -1,14 +1,16 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import { AboutUsCard } from "./AboutUsCard";
 import { Context } from "../store/appContext";
+import { MenuCard } from "./MenuCard";
 
 export function Cart() {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="row">
-			<h1>DO YOU UNDERSTAND THE WORDS THAT ARE COMING OUT OF MY MOUTH</h1>
+		<div className="row row-cols-1 row-cols-md-3">
+			{store.cart.map((menu, index) => (
+				<MenuCard key={index} menu={menu} />
+			))}
 		</div>
 	);
 }
