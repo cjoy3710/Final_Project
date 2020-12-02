@@ -35,7 +35,8 @@ export const Navbar3 = () => {
 					{/* <Nav.Link eventKey={2} href="#memes">
 						Login / Sign-up
 					</Nav.Link> */}
-					<Nav.Link type="button" className=" login-btn" onClick={handleShow}>
+					<Nav.Link href="/Login">
+						{/* type="button" className=" login-btn" onClick={handleShow}> */}
 						Login / Sign-Up
 					</Nav.Link>
 
