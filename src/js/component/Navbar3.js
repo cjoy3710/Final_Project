@@ -29,6 +29,7 @@ export const Navbar3 = () => {
 					<Nav.Link href="/">Home</Nav.Link>
 					<Nav.Link href="/aboutus">About Us</Nav.Link>
 					<Nav.Link href="/menu">Menu / Order</Nav.Link>
+					<Nav.Link href="/cart">Cart</Nav.Link>
 					{/* </Nav>
 				<Nav> */}
 					{/* <Nav.Link href="#deets">More deets</Nav.Link> */}

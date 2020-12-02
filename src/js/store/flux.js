@@ -47,7 +47,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					item: "Fillet Mignon",
 					price: "39"
 				}
-			]
+			],
+			cart: [{}]
 		},
 		actions: {
 			getUs: () => {
