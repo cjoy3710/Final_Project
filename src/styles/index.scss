@@ -73,3 +73,28 @@ body{
     
     
 }
+// Login and SignUp Pages
+
+.login-form{
+    height: 400px;
+    max-width: 600px;
+    background: white;
+    color: black;
+    margin: auto;
+}
+
+.label{
+    margin-top: 10px;
+}
+
+.login-heading{
+    padding-top: 15px;
+    text-align: center;
+}
+
+.submit-btn{
+    margin-top: 20px !important;
+}
+.signup-link{
+    margin-top: 20px;
+}

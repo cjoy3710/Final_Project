@@ -11,7 +11,7 @@ export function MenuCard(props) {
 	const [cart, setCart] = useState([]);
 
 	const addToCart = menu => {
-		console.log("we are in business");
+		// console.log("we are in business");
 		setCart([...cart, menu]);
 	};
 	const removeFromCart = menuToRemove => {
