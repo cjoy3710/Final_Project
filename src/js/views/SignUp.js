@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useCallback } from "react";
+import { withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import app from "../../base";
+import Login from "./Login";
 
-export default function SignUp() {
+const SignUp = ({ history }) => {
+	const handleSignUp = useCallback(
+		async event => {
+			event.preventDefault();
+			const { email, password } = event.target.elements;
+			try {
+				await app.auth().createUserWithEmailAndPassword(email.value, password.value);
+				location.replace("https://3000-f9da98eb-d310-44f3-8276-9f6baf85a297.ws-us03.gitpod.io/");
+			} catch (error) {
+				alert(error);
+			}
+		},
+		[history]
+	);
+
 	return (
 		<div>
 			<div className="container-fluid login-form">
 				<h2 className="login-heading">Create New Account</h2>
-				<form>
+				<form onSubmit={handleSignUp}>
 					<div className="form-group">
 						<label className="label">Email address</label>
 						<input
+							name="email"
 							type="email"
 							className="form-control"
 							id="exampleInputEmail1"
@@ -22,6 +41,7 @@ export default function SignUp() {
 					<div className="form-group">
 						<label>Password</label>
 						<input
+							name="password"
 							type="password"
 							className="form-control"
 							id="exampleInputPassword1"
@@ -32,7 +52,7 @@ export default function SignUp() {
 						<input type="checkbox" className="form-check-input" id="exampleCheck1" />
 						<label className="form-check-label">I am not a robot.</label>
 					</div>
-					<button type="submit" className="btn btn-info submit-btn">
+					<button type="submit" className="btn btn-dark submit-btn">
 						Sign up
 					</button>
 				</form>
@@ -59,4 +79,9 @@ export default function SignUp() {
 			</div>
 		</div>
 	);
-}
+};
+SignUp.propTypes = {
+	history: PropTypes.object
+};
+
+export default withRouter(SignUp);

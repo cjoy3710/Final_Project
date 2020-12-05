@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import CDELogo from "../../img/CDE_Logo_2_small.jpg";
 import Modal from "react-bootstrap/Modal";
@@ -6,11 +6,26 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import app from "../../base";
+import { AuthContext } from "../store/AuthContext.js";
 
 export const Navbar3 = () => {
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
+
+	let logout = "";
+	const { currentUser } = useContext(AuthContext);
+
+	if (currentUser) {
+		logout = (
+			<Nav.Link onClick={() => app.auth().signOut()} href="/Login">
+				Sign out
+			</Nav.Link>
+		);
+	} else {
+		logout = <Nav.Link href="/Login">Login / Sign-Up</Nav.Link>;
+	}
 
 	return (
 		<Navbar collapseOnSelect expand="lg" variant="dark" className="">
@@ -36,10 +51,7 @@ export const Navbar3 = () => {
 					{/* <Nav.Link eventKey={2} href="#memes">
 						Login / Sign-up
 					</Nav.Link> */}
-					<Nav.Link href="/Login">
-						{/* type="button" className=" login-btn" onClick={handleShow}> */}
-						Login / Sign-Up
-					</Nav.Link>
+					{logout}
 
 					<Modal show={show} onHide={handleClose}>
 						<Modal.Header closeButton>

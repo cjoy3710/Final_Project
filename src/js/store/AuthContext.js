@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import app from "../base";
+import app from "../../base";
 import PropTypes from "prop-types";
 
 export const AuthContext = React.createContext();

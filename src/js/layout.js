@@ -8,7 +8,7 @@ import { Cart } from "./views/Cart";
 
 import Login from "./views/Login";
 import SignUp from "./views/SignUp";
-import { AuthProvider } from "../Context/AuthContext";
+import { AuthProvider } from "./store/AuthContext";
 import PrivateRoute from "./component/PrivateRoute";
 
 import { AboutUs } from "./views/AboutUs";

@@ -1,17 +1,41 @@
-import React from "react";
+import React, { useCallback, useContext } from "react";
 import Form from "react-bootstrap";
 import Button from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { withRouter, Redirect } from "react-router-dom";
+import PropTypes from "prop-types";
+import app from "../../base";
+import { AuthContext } from "../store/AuthContext.js";
 
-export default function Login() {
+const Login = ({ history }) => {
+	const handleLogin = useCallback(
+		async event => {
+			event.preventDefault();
+			const { email, password } = event.target.elements;
+			try {
+				await app.auth().createUserWithEmailAndPassword(email.value, password.value);
+				history.push("/");
+			} catch (error) {
+				alert(error);
+			}
+		},
+		[history]
+	);
+	const { currentUser } = useContext(AuthContext);
+
+	if (currentUser) {
+		return <Redirect to="https://3000-f9da98eb-d310-44f3-8276-9f6baf85a297.ws-us03.gitpod.io/" />;
+	}
+
 	return (
 		<div>
 			<div className="container-fluid login-form">
 				<h2 className="login-heading">Login to my account</h2>
-				<form>
+				<form onSubmit={handleLogin}>
 					<div className="form-group">
 						<label className="label">Email address</label>
 						<input
+							name="email"
 							type="email"
 							className="form-control"
 							id="exampleInputEmail1"
@@ -25,6 +49,7 @@ export default function Login() {
 					<div className="form-group">
 						<label>Password</label>
 						<input
+							name="password"
 							type="password"
 							className="form-control"
 							id="exampleInputPassword1"
@@ -35,16 +60,14 @@ export default function Login() {
 						<input type="checkbox" className="form-check-input" id="exampleCheck1" />
 						<label className="form-check-label">I am not a robot.</label>
 					</div>
-					<button type="submit" className="btn btn-info submit-btn">
+					<button type="submit" className="btn btn-dark submit-btn">
 						Login
 					</button>
 					<div>
 						<p className="signup-link">
 							Need to create an account?{" "}
 							<Link to="/SignUp">
-								<span classNameName="btn btn-primary btn-lg" href="#" role="button">
-									Sign up here.
-								</span>
+								<span>Sign up here.</span>
 							</Link>
 						</p>
 					</div>
@@ -72,4 +95,9 @@ export default function Login() {
 			</div>
 		</div>
 	);
-}
+};
+Login.propTypes = {
+	history: PropTypes.object
+};
+
+export default withRouter(Login);
