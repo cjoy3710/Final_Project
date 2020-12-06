@@ -43,8 +43,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					item: "Roast Chicken",
 					price: "24",
-					description:
-						"Organic farm raised Delaware chicken roasted with lemon-garlic butter. Served with mashed potatoes.",
+					description: "Organic, farm-raised Delaware chicken roasted with lemon-garlic butter.",
 					img:
 						"https://images.pexels.com/photos/2994900/pexels-photo-2994900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 				},

@@ -70,14 +70,14 @@ body{
     display: flex;
     margin-left: 100px;
     height: 500px;
-    padding: 25px; 
+    padding: 20px; 
     
     
 }
 .menu-card-body{
-   align-content: center;
-    width: 300px;
-  height: 50px;
+//    align-content: center;
+//     width: 300px;
+//   height: 50px;
 //   padding: 30px;  
 }
 
@@ -88,7 +88,7 @@ body{
 
 .menu-card-buttons{
     // margin-top: 0rem;
-    position: relative;
+    // position: relative;
     
 }
 
@@ -96,6 +96,9 @@ body{
     margin-left: 100px;
 }
 
+.modal-open{
+    text-align:center;
+}
 
 
 // Login and SignUp Pages

@@ -52,13 +52,32 @@ export const Navbar3 = () => {
 						Login / Sign-up
 					</Nav.Link> */}
 					{logout}
-
-					<Modal show={show} onHide={handleClose}>
-						<Modal.Header closeButton>
-							<Modal.Title>Login Here</Modal.Title>
+					{/* <Modal show={show} onHide={handleClose}>
+						<Modal.Header closeButton> </Modal.Header>
+						<Carousel>
+							<Carousel.Item>
+								<img className="d-block w-100" src={RestImg1} alt="First slide" />
+								{/* <Carousel.Caption>
+					
+				</Carousel.Caption> */}
+					{/* </Carousel.Item>
+							<Carousel.Item>
+								<img className="d-block w-100" src={FoodImg1} alt="Third slide" /> */}
+					{/* <Carousel.Caption>
+					<h3>Second slide label</h3>
+				</Carousel.Caption> */}
+					{/* </Carousel.Item>
+							<Carousel.Item>
+								<img className="d-block w-100" src={FoodImg2} alt="Third slide" /> */}
+					{/* <Carousel.Caption>
+					<h3>Third slide label</h3>
+				</Carousel.Caption> */}
+					{/* </Carousel.Item>
+						</Carousel> */}
+					{/* <Modal.Title>Login Here</Modal.Title>
 						</Modal.Header>
-						<Modal.Body>
-							<Form>
+						<Modal.Body> */}
+					{/* <Form>
 								<Form.Group controlId="formBasicEmail">
 									<Form.Label>Email address</Form.Label>
 									<Form.Control type="email" placeholder="Enter email" />
@@ -70,17 +89,17 @@ export const Navbar3 = () => {
 								<Form.Group controlId="formBasicPassword">
 									<Form.Label>Password</Form.Label>
 									<Form.Control type="password" placeholder="Password" />
-								</Form.Group>
-								{/* <Form.Group controlId="formBasicCheckbox">
+								</Form.Group> */}
+					{/* <Form.Group controlId="formBasicCheckbox">
 								<Form.Check type="checkbox" label="Check me out" />
 							</Form.Group> */}
-								<Button variant="primary" type="submit">
+					{/* <Button variant="primary" type="submit">
 									Login
 								</Button>
 							</Form>
-						</Modal.Body>
-						<Modal.Footer />
-					</Modal>
+						</Modal.Body> */}
+					{/* <Modal.Footer /> */}
+					{/* </Modal> */}
 				</Nav>
 			</Navbar.Collapse>
 		</Navbar>
