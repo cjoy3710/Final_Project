@@ -21,16 +21,19 @@ export function MenuCard(props) {
 		<div>
 			<div className="card-deck">
 				<div className="card">
-					<img src={FoodImg3} className="card-img-top" alt="..." />
-					<div className="card-body">
+					<img src={props.menu.img} className="card-img-top" alt="..." />
+					<div className="card-body menu-card-body">
 						<h5 className="card-title">{props.menu.item}</h5>
 						<p className="card-text">${props.menu.price}</p>
-						<button onClick={() => addToCart()} className="btn btn-dark">
-							Add to Cart ({cart.length})
-						</button>
-						<button onClick={() => removeFromCart()} className="btn btn-dark">
-							Remove
-						</button>
+						<p className="card-text">{props.menu.description}</p>
+						<div className="menu-card-buttons">
+							<button onClick={() => addToCart()} className="btn btn-dark mr-2">
+								Add to Order ({cart.length})
+							</button>
+							<button onClick={() => removeFromCart()} className="btn btn-dark mr-2">
+								Remove
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
