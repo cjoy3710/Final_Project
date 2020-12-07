@@ -11,6 +11,7 @@ export function AboutUsCard(props) {
 	const { store, actions } = useContext(Context);
 	let us = actions.getUs();
 	return (
+<<<<<<< HEAD
 		<div>
 			<div className="card">
 				<img src={rigoImage} className="card-img-top" alt="..." />
@@ -18,6 +19,13 @@ export function AboutUsCard(props) {
 					<h5 className="card-title">{props.us.name}</h5>
 					<p className="card-text">{props.us.background}</p>
 				</div>
+=======
+		<div className="card about-cards text-center">
+			<img src={props.us.img} className="card-img-top" alt="..." />
+			<div className="card-body">
+				<h5 className="card-title">{props.us.name}</h5>
+				<p className="card-text">{props.us.background}</p>
+>>>>>>> e9814560e7c52f983a8cccb5d5896d9a799daec4
 			</div>
 		</div>
 	);
