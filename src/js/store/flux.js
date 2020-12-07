@@ -50,34 +50,35 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					item: "Vegan Sushi",
 					price: "14",
-					description: "",
+					description: "A blend of pickled vegetables, gelatinized squash, and tapioca cake.",
 					img:
 						"https://images.pexels.com/photos/3628428/pexels-photo-3628428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 				},
 				{
 					item: "Turkey Club Sandwich",
 					price: "15",
+					description: "Roasted organic turkey, applewood smoked bacon, Bibb lettuce, garlic aoli.",
 					img:
 						"https://images.pexels.com/photos/959922/pexels-photo-959922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 				},
 				{
 					item: "Pork Lettuce Cups",
 					price: "12",
-					description: "",
+					description: "Sauteed ground pork, guava soy glaze, pickled cabbage, crispy rice noodles.",
 					img:
 						"https://images.pexels.com/photos/2531051/pexels-photo-2531051.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 				},
 				{
 					item: "Chicken Salad Sandwich",
 					price: "14",
-					description: "",
+					description: "Roast chicken tossed in a curry-garlic mayo, grapes, walnuts, artisan bread.",
 					img:
 						"https://images.pexels.com/photos/3609894/pexels-photo-3609894.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 				},
 				{
 					item: " Wild Alaskan Salmon",
 					price: "31",
-					description: "",
+					description: "Pan-seared, served with steamed vegetables and homemade lemon aoli.",
 					img:
 						"https://images.pexels.com/photos/842142/pexels-photo-842142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 				}
