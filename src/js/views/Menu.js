@@ -17,7 +17,7 @@ export function Menu() {
 			</div>
 			<h2 className="order-total m-5">Order Total: ${}</h2>
 			<div className="row justify-content-center">
-				<button className="btn btn-dark place-order-btn mb-5">View Order</button>
+				<button className="btn btn-lg btn-dark place-order-btn mb-5">View Order</button>
 			</div>
 		</div>
 	);
