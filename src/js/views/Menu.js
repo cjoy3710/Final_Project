@@ -15,8 +15,10 @@ export function Menu() {
 					<MenuCard key={index} menu={menu} />
 				))}
 			</div>
-			<h2>Order Total: ${}</h2>
-			<button className="btn btn-dark text-center place-order-btn">Place Order</button>
+			<h2 className="order-total m-5">Order Total: ${}</h2>
+			<div className="row justify-content-center">
+				<button className="btn btn-dark place-order-btn mb-5">View Order</button>
+			</div>
 		</div>
 	);
 }
