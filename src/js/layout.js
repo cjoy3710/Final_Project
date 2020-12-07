@@ -5,6 +5,12 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Menu } from "./views/Menu";
 import { Cart } from "./views/Cart";
+
+import Login from "./views/Login";
+import SignUp from "./views/SignUp";
+import { AuthProvider } from "./store/AuthContext";
+import PrivateRoute from "./component/PrivateRoute";
+
 import { AboutUs } from "./views/AboutUs";
 // import { Single } from "./views/single";
 import injectContext from "./store/appContext";
@@ -22,26 +28,34 @@ const Layout = () => {
 
 	return (
 		<div className="d-flex flex-column">
-			<BrowserRouter basename={basename}>
-				<ScrollToTop>
-					<Navbar3 />
-					<Switch>
-						<Route exact path="/">
-							<Home />
-						</Route>
-						<Route exact path="/menu">
-							<Menu />
-						</Route>
-						<Route exact path="/aboutus">
-							<AboutUs />
-						</Route>
-						<Route exact path="/cart">
-							<Cart />
-						</Route>
-					</Switch>
-					{/* <Footer /> */}
-				</ScrollToTop>
-			</BrowserRouter>
+			<AuthProvider>
+				<BrowserRouter basename={basename}>
+					<ScrollToTop>
+						<Navbar3 />
+						<Switch>
+							<Route exact path="/Login">
+								<Login />
+							</Route>
+							<Route exact path="/SignUp">
+								<SignUp />
+							</Route>
+							<Route exact path="/">
+								<Home />
+							</Route>
+							<Route exact path="/menu">
+								<Menu />
+							</Route>
+							<Route exact path="/aboutus">
+								<AboutUs />
+							</Route>
+							<Route exact path="/cart">
+								<Cart />
+							</Route>
+						</Switch>
+						{/* <Footer /> */}
+					</ScrollToTop>
+				</BrowserRouter>
+			</AuthProvider>
 		</div>
 	);
 };
