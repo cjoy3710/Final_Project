@@ -10,17 +10,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background:
 						"Edward is an experienced sushi chef, working out of Sushi Sake Doral for the last 8 years. He is happily married and blessed with 3 children",
 					img:
-						"https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+						"https://images.pexels.com/photos/3437689/pexels-photo-3437689.jpeg?cs=srgb&dl=pexels-sebastian-coman-photography-3437689.jpg&fm=jpg"
 				},
 				{
 					name: "Catherine Spitzer",
 					background: "Catherine is an award-winning opera singer, working out of Broward.",
-					img: "{ profilePic }"
+					img:
+						"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.scienceabc.com%2Fwp-content%2Fuploads%2F2017%2F05%2FLady-opera-singer-singing-on-stage-waagnerbirocom.jpg&f=1&nofb=1"
 				},
 				{
 					name: "David Wimert",
 					background: "David is an oscar-winning film editor, working out of Miami.",
-					img: { profilePic }
+					img:
+						"https://images.pexels.com/photos/1870438/pexels-photo-1870438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 				}
 			],
 			menu: [
