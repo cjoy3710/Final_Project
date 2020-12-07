@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import CDELogo from "../../img/CDE_Logo_2_small.jpg";
+import CDELogo from "../../img/CDE_Logo_3.png";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -32,9 +32,9 @@ export const Navbar3 = () => {
 			<Navbar.Brand href="/">
 				<img
 					src={CDELogo}
-					width="150"
-					height="100"
-					className="d-inline-block align-top"
+					width="100px"
+					height="100px"
+					className="nav-logo d-inline-block align-top"
 					alt="React Bootstrap logo"
 				/>
 			</Navbar.Brand>
