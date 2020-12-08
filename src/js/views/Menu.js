@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "../../styles/home.scss";
 import { MenuCard } from "./MenuCard";
+import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export function Menu() {
@@ -17,7 +18,9 @@ export function Menu() {
 			</div>
 			<h2 className="order-total m-5">Order Total: ${}</h2>
 			<div className="row justify-content-center">
-				<button className="btn btn-lg btn-dark place-order-btn mb-5">View Order</button>
+				<Link to="/cart">
+					<button className="btn btn-lg btn-dark place-order-btn mb-5">View Order</button>
+				</Link>
 			</div>
 		</div>
 	);
