@@ -7,10 +7,16 @@ export function Cart() {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="row row-cols-1 row-cols-md-3">
-			{store.cart.map((menu, index) => (
-				<MenuCard key={index} menu={menu} />
-			))}
-		</div>
+        <div>
+            
+        </div>
+
+
+        // <div 
+        // className="row row-cols-1 row-cols-md-3">
+		// 	{store.cart.map((menu, index) => (
+		// 		<MenuCard key={index} menu={menu} />
+		// 	))}
+		// </div>
 	);
 }
