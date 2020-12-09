@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "../../styles/home.scss";
 import { MenuCard } from "./MenuCard";
@@ -7,6 +7,7 @@ import { Context } from "../store/appContext";
 
 export function Menu() {
 	const { store, actions } = useContext(Context);
+	const [cart, setCart] = useState([]);
 
 	return (
 		<div>
@@ -19,7 +20,7 @@ export function Menu() {
 			<h2 className="order-total m-5">Order Total: ${}</h2>
 			<div className="row justify-content-center">
 				<Link to="/cart">
-					<button className="btn btn-lg btn-dark place-order-btn mb-5">View Order</button>
+					<button className="btn btn-lg btn-dark place-order-btn mb-5">View Order ({cart.length})</button>
 				</Link>
 			</div>
 		</div>
