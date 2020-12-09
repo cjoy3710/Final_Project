@@ -5,6 +5,7 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Menu } from "./views/Menu";
 import { Cart } from "./views/Cart";
+import { CartProvider } from "./views/CartContext";
 
 import Login from "./views/Login";
 import SignUp from "./views/SignUp";
@@ -49,7 +50,9 @@ const Layout = () => {
 								<AboutUs />
 							</Route>
 							<Route exact path="/cart">
-								<Cart />
+								<CartProvider>
+									<Cart />
+								</CartProvider>
 							</Route>
 						</Switch>
 						{/* <Footer /> */}
