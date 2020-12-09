@@ -12,8 +12,8 @@ export function AboutUsCard(props) {
 	let us = actions.getUs();
 	return (
 		<div>
-			<div className="card">
-				<img src={rigoImage} className="card-img-top" alt="..." />
+			<div className="card about-cards text-center">
+				<img src={props.us.img} className="card-img-top" alt="..." />
 				<div className="card-body">
 					<h5 className="card-title">{props.us.name}</h5>
 					<p className="card-text">{props.us.background}</p>
