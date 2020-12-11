@@ -28,7 +28,7 @@ export const Navbar3 = () => {
 	}
 
 	return (
-		<Navbar collapseOnSelect expand="lg" variant="dark" className="">
+		<Navbar collapseOnSelect expand="lg" variant="dark" className="main-navbar">
 			<Navbar.Brand href="/">
 				<img
 					src={CDELogo}
