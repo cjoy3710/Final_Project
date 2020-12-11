@@ -40,7 +40,23 @@ export function MenuCard(props) {
 						<p className="card-text">${props.menu.price}</p>
 						<p className="card-text">{props.menu.description}</p>
 						<div className="menu-card-buttons">
-							<button onClick={() => addToCart()} className="btn btn-dark mr-2">
+							<button
+								onClick={() => {
+									let amount;
+									let value = localStorage.getItem(props.menu.item);
+
+									console.log("HELLO CART:", props.menu.item, value);
+									if (value === null || value === "0") {
+										amount = 1;
+									} else {
+										value = Number(value);
+										amount = value + 1;
+									}
+									localStorage.setItem(props.menu.item, amount);
+									value = localStorage.getItem(props.menu.item);
+									console.log("UPDATED CART:", props.menu.item, value);
+								}}
+								className="btn btn-dark mr-2">
 								Add to Order ({cart.length})
 							</button>
 							<button onClick={() => removeFromCart()} className="btn btn-dark mr-2">
