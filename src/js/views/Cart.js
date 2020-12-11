@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 import { MenuCard } from "./MenuCard";
-import { PaypalButtons } from "../component/PayPal";
+import PayPal from "../component/PayPal";
 
 export function Cart() {
 	// const { store, actions } = useContext(Context);
@@ -26,7 +26,6 @@ export function Cart() {
 					Checkout
 				</button>
 			)}
-			{/* <h1>HELLO WORLD</h1> */}
 		</div>
 	);
 }
