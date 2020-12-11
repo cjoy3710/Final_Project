@@ -50,9 +50,9 @@ const Layout = () => {
 								<AboutUs />
 							</Route>
 							<Route exact path="/cart">
-								<CartProvider>
-									<Cart />
-								</CartProvider>
+								{/* <CartProvider> */}
+								<Cart />
+								{/* </CartProvider> */}
 							</Route>
 						</Switch>
 						{/* <Footer /> */}

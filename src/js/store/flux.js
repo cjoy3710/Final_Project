@@ -93,7 +93,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					id: 8
 				}
 			],
-			cart: [{}]
+			cart: []
 		},
 		actions: {
 			getUs: () => {

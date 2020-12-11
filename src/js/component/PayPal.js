@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
-export default function Paypal() {
-	const paypal = useRef();
+export function PaypalButtons() {
+	const paypalRef = useRef();
 
 	useEffect(() => {
 		window.paypal
@@ -25,15 +25,15 @@ export default function Paypal() {
 					// console.log(order);
 				},
 				onError: err => {
-					// console.log(err);
+					console.log(err);
 				}
 			})
-			.render(paypal.current);
+			.render(paypalRef.current);
 	}, []);
 
 	return (
 		<div>
-			<div ref={paypal} />
+			<div ref={paypalRef} />
 		</div>
 	);
 }
