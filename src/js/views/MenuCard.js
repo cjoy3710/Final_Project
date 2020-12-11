@@ -54,7 +54,7 @@ export function MenuCard(props) {
 									}
 									localStorage.setItem(props.menu.item, amount);
 									value = localStorage.getItem(props.menu.item);
-									console.log("UPDATED CART:", props.menu.item, value);
+									console.log("UPDATED CART:", props.menu.item, props.menu.price);
 								}}
 								className="btn btn-dark mr-2">
 								Add to Order ({cart.length})
