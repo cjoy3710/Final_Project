@@ -11,12 +11,16 @@ export function Cart() {
 	let [checkout, setCheckOut] = useState(false);
 
 	return (
-		<div className="cart-btn">
+		<div className="row justify-content-center">
 			{checkout ? (
 				<PaypalButtons />
 			) : (
 				// <div ref={paypalRef} />
 				<button
+					className="btn
+					btn-dark
+					
+					cart-btn"
 					onClick={() => {
 						setCheckOut(true);
 					}}>

@@ -11,17 +11,55 @@ export function MenuCard(props) {
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 
-	const { store, actions } = useContext(Context);
+	// GENERAL PRICE
+	let defaultGeneralPrice = 10;
+	const [generalPrice, setGeneralPrice] = useState(defaultGeneralPrice);
 
-	const [cart, setCart] = useState([]);
+	// QUANTITY
+	const [quantity, setQuantaty] = useState(0);
 
-	const addToCart = menu => {
-		// console.log("we are in business");
-		setCart([...cart, menu]);
-	};
-	const removeFromCart = menuToRemove => {
-		setCart(cart.filter(menu => menu !== menuToRemove));
-	};
+	// DISCOUNT
+	let dafaultDiscount = 5;
+	// let defaultCouponDiscount = quantity * dafaultDiscount ;
+	const [couponDiscount, setCouponDiscount] = useState(dafaultDiscount);
+	console.log(couponDiscount);
+
+	// TOTAL PRICE
+	// let defaultTotalPrice = generalPrice * quantity - couponDiscount ;
+	// console.log(defaultTotalPrice);
+	const [totalPrice, setTotalPrice] = useState(generalPrice);
+
+	const [addToCart, setAddToCart] = useState(false);
+	console.log(`Add to cart button click ? ${addToCart}`);
+
+	function incrementQuentaty() {
+		// EVERYTIME WHEN CLICK PLUS BUTTON IT WILL INCREMENT BY ONE
+		// AND TOTAL PRICE WILL BE CHANGE
+		// PRICE * QUANITY = TOTAL
+		setQuantaty(prevQuantity => prevQuantity + 1);
+		setTotalPrice(prevPrice => prevPrice + generalPrice);
+	}
+	function decrementQuantity() {
+		setQuantaty(prevQuantity => prevQuantity - 1);
+		setTotalPrice(prevPrice => prevPrice - generalPrice);
+	}
+	function handleClick(e) {
+		e.preventDefault();
+		setAddToCart(prevAddToCart => (prevAddToCart = true));
+	}
+
+	//
+	// const { store, actions } = useContext(Context);
+
+	// const [cart, setCart] = useState([]);
+
+	// const addToCart = menu => {
+	// 	// console.log("we are in business");
+	// 	setCart([...cart, menu]);
+	// };
+	// const removeFromCart = menuToRemove => {
+	// 	setCart(cart.filter(menu => menu !== menuToRemove));
+	// };
 	return (
 		<div>
 			<div className="card-deck">
@@ -40,6 +78,20 @@ export function MenuCard(props) {
 						<p className="card-text">${props.menu.price}</p>
 						<p className="card-text">{props.menu.description}</p>
 						<div className="menu-card-buttons">
+							<div className="set-quan set-bg">
+								<div className="quantaty">
+									{props.menu.item} {quantity}
+								</div>
+								<div className="btns">
+									<button className="btn" onClick={incrementQuentaty}>
+										+
+									</button>
+									<button className="btn" onClick={decrementQuantity}>
+										-
+									</button>
+								</div>
+							</div>
+							{/* <button onClick={() => addToCart()} className="btn btn-dark mr-2">
 							<button
 								onClick={() => {
 									let amount;
@@ -61,7 +113,7 @@ export function MenuCard(props) {
 							</button>
 							<button onClick={() => removeFromCart()} className="btn btn-dark mr-2">
 								Remove
-							</button>
+							</button> */}
 						</div>
 					</div>
 				</div>

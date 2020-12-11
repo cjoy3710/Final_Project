@@ -6,36 +6,26 @@
 .nav-menu { 
     list-style-type: none;
     font-weight: bold;
+    
 }
 .navbar{
     margin-bottom: 0;
 }
 
-// .nav-logo {
-//     height: 50px;
-//     margin-bottom: 12px;
-// }
 
 .menu-bar {
-  position: absolute;
-  top: 5px;
-  right: 5px;
+//   position: absolute;
+//   top: 5px;
+//   right: 5px;
   color: white;
   font-family:'Josefin Sans', sans-serif !important;
   font-weight: bold;
   font-size: 100%;
-  
-  
 }
-// .menu-items:hover {
-//     color:white !important;
-// }
+
 
 .menu-items{
      color: white !important;
-    //  top: 12px;
-     
-
 }
 
 
@@ -46,6 +36,7 @@
 //   padding: 0!important;
 //    color: #607D8B !important;
 // }
+
 .img-responsive{
     max-width: 100%;
     height: auto;
@@ -129,6 +120,10 @@ body{
 
 .about-cards{
     margin: 20px;
+     box-sizing: content-box;  
+  width: 300px;
+  height: 370px;
+ 
 }
 
 // Login and SignUp Pages
@@ -156,3 +151,8 @@ body{
 .signup-link{
     margin-top: 20px;
 }
+
+// //cart and checkout
+// .cart-btn {
+
+// }
