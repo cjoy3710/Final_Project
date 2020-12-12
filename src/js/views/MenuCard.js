@@ -12,21 +12,21 @@ export function MenuCard(props) {
 	const handleShow = () => setShow(true);
 
 	// GENERAL PRICE
-	let defaultGeneralPrice = 10;
+	let defaultGeneralPrice = props.menu.price;
 	const [generalPrice, setGeneralPrice] = useState(defaultGeneralPrice);
 
 	// QUANTITY
 	const [quantity, setQuantaty] = useState(0);
 
-	// DISCOUNT
-	let dafaultDiscount = 5;
-	// let defaultCouponDiscount = quantity * dafaultDiscount ;
-	const [couponDiscount, setCouponDiscount] = useState(dafaultDiscount);
-	console.log(couponDiscount);
+	// // DISCOUNT
+	// let dafaultDiscount = 5;
+	// // let defaultCouponDiscount = quantity * dafaultDiscount ;
+	// const [couponDiscount, setCouponDiscount] = useState(dafaultDiscount);
+	// console.log(couponDiscount);
 
 	// TOTAL PRICE
-	// let defaultTotalPrice = generalPrice * quantity - couponDiscount ;
-	// console.log(defaultTotalPrice);
+	let defaultTotalPrice = generalPrice * quantity;
+	console.log(defaultTotalPrice);
 	const [totalPrice, setTotalPrice] = useState(generalPrice);
 
 	const [addToCart, setAddToCart] = useState(false);

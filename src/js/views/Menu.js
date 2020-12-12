@@ -8,6 +8,7 @@ import { Context } from "../store/appContext";
 export function Menu() {
 	const { store, actions } = useContext(Context);
 	const [cart, setCart] = useState([]);
+	// let total = actions.getTotal();
 
 	return (
 		<div>

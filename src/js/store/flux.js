@@ -1,5 +1,6 @@
 import rigoImage from "../../img/rigo-baby.jpg";
 import profilePic from "../../img/profile-pic.png";
+import { useState } from "react";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -99,6 +100,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getUs: () => {
 				return getStore().us;
 			},
+			// getTotal: () => {
+			// 	let defaultGeneralPrice = getStore().menu.price;
+			// 	const [generalPrice, setGeneralPrice] = useState(defaultGeneralPrice);
+			// 	let defaultTotalPrice = generalPrice * quantity;
+			// 	console.log(defaultTotalPrice);
+			// 	const [totalPrice, setTotalPrice] = useState(generalPrice);
+			// 	return defaultTotalPrice;
+			// },
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

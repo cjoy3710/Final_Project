@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 import { MenuCard } from "./MenuCard";
 import PayPal from "../component/PayPal";
-import PaypalButtons from "../component/PayPal";
+import { PaypalButtons } from "../component/PayPal";
 
 export function Cart() {
 	// const { store, actions } = useContext(Context);
