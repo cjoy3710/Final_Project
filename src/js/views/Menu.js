@@ -12,7 +12,8 @@ export function Menu() {
 	return (
 		<div>
 			<h2 className="menu-heading">Seasonal Winter Menu</h2>
-			<div className="row ">
+			<div className="row menu-page ">
+				{/* <MenuCard /> */}
 				{store.menu.map((menu, index) => (
 					<MenuCard key={index} menu={menu} />
 				))}

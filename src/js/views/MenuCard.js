@@ -16,13 +16,12 @@ export function MenuCard(props) {
 	const [generalPrice, setGeneralPrice] = useState(defaultGeneralPrice);
 
 	// QUANTITY
-	const [quantity, setQuantaty] = useState(0);
-
-	// DISCOUNT
-	let dafaultDiscount = 5;
-	// let defaultCouponDiscount = quantity * dafaultDiscount ;
-	const [couponDiscount, setCouponDiscount] = useState(dafaultDiscount);
-	console.log(couponDiscount);
+	let [quantity, setQuantaty] = useState(0);
+	if (quantity < 1) {
+		quantity = 0;
+	} else if (quantity > 25) {
+		quantity = 25;
+	}
 
 	// TOTAL PRICE
 	// let defaultTotalPrice = generalPrice * quantity - couponDiscount ;
