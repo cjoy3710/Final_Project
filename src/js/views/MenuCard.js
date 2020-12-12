@@ -9,14 +9,21 @@ import FoodImg3 from "../../img/food-img-3.jpg";
 export function MenuCard(props) {
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
+    const handleShow = () => setShow(true);
+    
+
 
 	// GENERAL PRICE
 	let defaultGeneralPrice = props.menu.price;
 	const [generalPrice, setGeneralPrice] = useState(defaultGeneralPrice);
 
 	// QUANTITY
-	const [quantity, setQuantaty] = useState(0);
+    const [quantity, setQuantaty] = useState(0);
+        if (quantity < 1) {
+		quantity = 0;
+	} else if (quantity > 25) {
+		quantity = 25;
+	}
 
 	// // DISCOUNT
 	// let dafaultDiscount = 5;
