@@ -50,9 +50,13 @@ const Layout = () => {
 								<AboutUs />
 							</Route>
 							<Route exact path="/cart">
+<<<<<<< HEAD
+								<Cart />
+=======
 								{/* <CartProvider> */}
 								<Cart />
 								{/* </CartProvider> */}
+>>>>>>> 336e448a70615d23ce884b7b207a6f998054c900
 							</Route>
 						</Switch>
 						{/* <Footer /> */}
