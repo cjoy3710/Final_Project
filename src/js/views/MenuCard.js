@@ -9,17 +9,15 @@ import FoodImg3 from "../../img/food-img-3.jpg";
 export function MenuCard(props) {
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    
-
+	const handleShow = () => setShow(true);
 
 	// GENERAL PRICE
 	let defaultGeneralPrice = props.menu.price;
 	const [generalPrice, setGeneralPrice] = useState(defaultGeneralPrice);
 
 	// QUANTITY
-    const [quantity, setQuantaty] = useState(0);
-        if (quantity < 1) {
+	let [quantity, setQuantity] = useState(0);
+	if (quantity < 1) {
 		quantity = 0;
 	} else if (quantity > 25) {
 		quantity = 25;
@@ -43,11 +41,11 @@ export function MenuCard(props) {
 		// EVERYTIME WHEN CLICK PLUS BUTTON IT WILL INCREMENT BY ONE
 		// AND TOTAL PRICE WILL BE CHANGE
 		// PRICE * QUANITY = TOTAL
-		setQuantaty(prevQuantity => prevQuantity + 1);
+		setQuantity(prevQuantity => prevQuantity + 1);
 		setTotalPrice(prevPrice => prevPrice + generalPrice);
 	}
 	function decrementQuantity() {
-		setQuantaty(prevQuantity => prevQuantity - 1);
+		setQuantity(prevQuantity => prevQuantity - 1);
 		setTotalPrice(prevPrice => prevPrice - generalPrice);
 	}
 	function handleClick(e) {
