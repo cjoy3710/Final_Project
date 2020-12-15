@@ -9,7 +9,7 @@ export const CartCard = props => {
 		<div className="card">
 			<div className="card-header">Featured</div>
 			<ul className="list-group list-group-flush">
-				<li className="list-group-item">{props.cart}</li>
+				<li className="list-group-item">{props.menu.item}</li>
 			</ul>
 		</div>
 	);
