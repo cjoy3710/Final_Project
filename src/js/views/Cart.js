@@ -13,9 +13,7 @@ export function Cart() {
 
 	return (
 		<div className="row justify-content-center">
-			{store.menu.map((menu, index) => (
-				<CartCard key={index} menu={menu} />
-			))}
+			<CartCard />
 			{checkout ? (
 				<PaypalButtons />
 			) : (

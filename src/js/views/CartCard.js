@@ -9,7 +9,9 @@ export const CartCard = props => {
 		<div className="card">
 			<div className="card-header">Featured</div>
 			<ul className="list-group list-group-flush">
-				<li className="list-group-item">{props.cart}</li>
+				{store.menu.map((menu, index) => (
+					<li className="list-group-item" key={index} menu={menu} />
+				))}
 			</ul>
 		</div>
 	);
