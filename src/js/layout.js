@@ -5,7 +5,7 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Menu } from "./views/Menu";
 import { Cart } from "./views/Cart";
-import { CartProvider } from "./views/CartContext";
+import { CartCard } from "./views/CartCard";
 
 import Login from "./views/Login";
 import SignUp from "./views/SignUp";
