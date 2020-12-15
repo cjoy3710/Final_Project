@@ -18,11 +18,7 @@ export function MenuCard(props) {
 	const [generalPrice, setGeneralPrice] = useState(defaultGeneralPrice);
 
 	// QUANTITY
-<<<<<<< HEAD
 	let [quantity, setQuantity] = useState(0);
-=======
-	let [quantity, setQuantaty] = useState(0);
->>>>>>> ad8d467305a0f3e568d04eaad5d42a4012afc100
 	if (quantity < 1) {
 		quantity = 0;
 	} else if (quantity > 25) {
@@ -47,12 +43,7 @@ export function MenuCard(props) {
 		// EVERYTIME WHEN CLICK PLUS BUTTON IT WILL INCREMENT BY ONE
 		// AND TOTAL PRICE WILL BE CHANGE
 		// PRICE * QUANITY = TOTAL
-<<<<<<< HEAD
 		setQuantity(prevQuantity => prevQuantity + 1);
-=======
-		actions.addToCart(props.menu);
-		setQuantaty(prevQuantity => prevQuantity + 1);
->>>>>>> ad8d467305a0f3e568d04eaad5d42a4012afc100
 		setTotalPrice(prevPrice => prevPrice + generalPrice);
 	}
 	function decrementQuantity() {
@@ -107,8 +98,7 @@ export function MenuCard(props) {
 									</button>
 								</div>
 								<button onClick={() => addToCart()} className="btn btn-dark">
-									{" "}
-									Add to cart{" "}
+									Add to cart
 								</button>
 							</div>
 							{/* <button onClick={() => addToCart()} className="btn btn-dark mr-2">
