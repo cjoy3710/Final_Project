@@ -7,29 +7,33 @@ import { PaypalButtons } from "../component/PayPal";
 import { CartCard } from "./CartCard";
 
 export function Cart() {
-	const { store, actions } = useContext(Context);
+    const { store, actions } = useContext(Context);
 
-	let [checkout, setCheckOut] = useState(false);
+    let [checkout, setCheckOut] = useState(false);
 
-	return (
-		<div className="row justify-content-center">
-			<CartCard />
-			{checkout ? (
-				<PaypalButtons />
-			) : (
-				// <div ref={paypalRef} />
-				<button
-					className="btn
+    return (
+        <div>
+        <div className="row justify-content-center">
+            <CartCard />
+        </div>
+        <div>
+            {checkout ? (
+                <PaypalButtons />
+            ) : (
+                    // <div ref={paypalRef} />
+                    <button
+                        className="btn
 					btn-dark
 					
 					cart-btn"
-					onClick={() => {
-						setCheckOut(true);
-					}}>
-					Checkout
-				</button>
-			)}
-		</div>
+                        onClick={() => {
+                            setCheckOut(true);
+                        }}>
+                        Checkout
+                    </button>
+                )}
+        </div>
+        </div>
 	);
 }
 
