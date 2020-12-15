@@ -9,6 +9,8 @@ import FoodImg3 from "../../img/food-img-3.jpg";
 export function MenuCard(props) {
 	const { store, actions } = useContext(Context);
 
+	// let cart = actions.addToCart();
+
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
@@ -84,25 +86,23 @@ export function MenuCard(props) {
 						<h5 className="card-title">{props.menu.item}</h5>
 						<p className="card-text">${props.menu.price}</p>
 						<p className="card-text">{props.menu.description}</p>
-						<div className="menu-card-buttons">
+						{/* <div className="menu-card-buttons">
 							<div className="set-quan set-bg">
-								<div className="quantaty">
-									{props.menu.item} {quantity}
-								</div>
-								<div className="btns">
+								<div className="quantaty">{props.menu.item}</div> */}
+						{/* <div className="btns">
 									<button className="btn" onClick={incrementQuentaty}>
 										+
 									</button>
 									<button className="btn" onClick={decrementQuantity}>
 										-
 									</button>
-								</div>
-								<button onClick={() => addToCart()} className="btn btn-dark">
+								</div> */}
+						{/* <button onClick={() => addToCart()} className="btn btn-dark">
 									{" "}
 									Add to cart{" "}
 								</button>
 							</div>
-							{/* <button onClick={() => addToCart()} className="btn btn-dark mr-2">
+							<button onClick={() => addToCart()} className="btn btn-dark mr-2">
 							<button
 								onClick={() => {
 									let amount;
@@ -125,11 +125,12 @@ export function MenuCard(props) {
 							<button onClick={() => removeFromCart()} className="btn btn-dark mr-2">
 								Remove
 							</button> */}
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		// </div>
+		// </div>
 	);
 }
 

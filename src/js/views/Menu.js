@@ -19,10 +19,10 @@ export function Menu() {
 					<MenuCard key={index} menu={menu} />
 				))}
 			</div>
-			<h2 className="order-total m-5">Order Total: ${}</h2>
+			{/* <h2 className="order-total m-5">Order Total: ${}</h2> */}
 			<div className="row justify-content-center">
 				<Link to="/cart">
-					<button className="btn btn-lg btn-dark place-order-btn mb-5">View Order ({cart.length})</button>
+					<button className="btn btn-lg btn-dark place-order-btn mb-5">Ready to Order </button>
 				</Link>
 			</div>
 		</div>
