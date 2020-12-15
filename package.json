@@ -80,6 +80,7 @@
 		"@auth0/auth0-react": "^1.2.0",
 		"bootstrap": "^4.5.3",
 		"firebase": "^8.1.2",
+		"google-maps-react": "^2.0.6",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
 		"react-async-script-loader": "^0.3.0",

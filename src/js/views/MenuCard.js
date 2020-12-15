@@ -96,10 +96,9 @@ export function MenuCard(props) {
 									<button className="btn" onClick={decrementQuantity}>
 										-
 									</button>
-								</div> */}
-						{/* <button onClick={() => addToCart()} className="btn btn-dark">
-									{" "}
-									Add to cart{" "}
+								</div>
+								<button onClick={() => addToCart()} className="btn btn-dark">
+									Add to cart
 								</button>
 							</div>
 							<button onClick={() => addToCart()} className="btn btn-dark mr-2">
