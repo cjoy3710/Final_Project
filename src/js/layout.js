@@ -17,6 +17,10 @@ import { AboutUs } from "./views/AboutUs";
 import injectContext from "./store/appContext";
 // import { Navbar } from "./component/navbar";
 
+import Data from "./store/Data";
+import { MainExample } from "./views/MainExample";
+import { BasketExample } from "./views/BasketExample";
+
 // import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Navbar3 } from "./component/Navbar3";
@@ -26,7 +30,7 @@ const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
 	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
 	const basename = process.env.BASENAME || "";
-
+	const { products } = Data;
 	return (
 		<div className="d-flex flex-column">
 			<AuthProvider>
@@ -44,7 +48,10 @@ const Layout = () => {
 								<Home />
 							</Route>
 							<Route exact path="/menu">
-								<Menu />
+								<div className="container row">
+									<MainExample products={products} />
+									<BasketExample />
+								</div>
 							</Route>
 							<Route exact path="/aboutus">
 								<AboutUs />

@@ -7,47 +7,33 @@ import { PaypalButtons } from "../component/PayPal";
 import { CartCard } from "./CartCard";
 
 export function Cart() {
-    const { store, actions } = useContext(Context);
+	const { store, actions } = useContext(Context);
 
-    let [checkout, setCheckOut] = useState(false);
+	let [checkout, setCheckOut] = useState(false);
 
-<<<<<<< HEAD
 	return (
-		<div className="row justify-content-center">
-			{store.menu.map((menu, index) => (
-				<CartCard key={index} menu={menu} />
-			))}
-			{checkout ? (
-				<PaypalButtons />
-			) : (
-				// <div ref={paypalRef} />
-				<button
-					className="btn
-=======
-    return (
-        <div>
-        <div className="row justify-content-center">
-            <CartCard />
-        </div>
-        <div>
-            {checkout ? (
-                <PaypalButtons />
-            ) : (
-                    // <div ref={paypalRef} />
-                    <button
-                        className="btn
->>>>>>> b8588549c033e82d1e34a5b93332398baacb3ae6
+		<div>
+			<div className="row justify-content-center">
+				<CartCard />
+			</div>
+			<div>
+				{checkout ? (
+					<PaypalButtons />
+				) : (
+					// <div ref={paypalRef} />
+					<button
+						className="btn
 					btn-dark
 					
 					cart-btn"
-                        onClick={() => {
-                            setCheckOut(true);
-                        }}>
-                        Checkout
-                    </button>
-                )}
-        </div>
-        </div>
+						onClick={() => {
+							setCheckOut(true);
+						}}>
+						Checkout
+					</button>
+				)}
+			</div>
+		</div>
 	);
 }
 
