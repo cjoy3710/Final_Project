@@ -48,10 +48,11 @@ const Layout = () => {
 								<Home />
 							</Route>
 							<Route exact path="/menu">
-								<div className="container row">
+								{/* <div className="container row">
 									<MainExample products={products} />
 									<BasketExample />
-								</div>
+								</div> */}
+								<Menu />
 							</Route>
 							<Route exact path="/aboutus">
 								<AboutUs />
