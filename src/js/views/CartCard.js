@@ -7,9 +7,11 @@ export const CartCard = props => {
 	const { store, actions } = useContext(Context);
 	return (
 		<div className="card">
-			<div className="card-header">Featured</div>
+			<div className="card-header">Order Summary</div>
 			<ul className="list-group list-group-flush">
-				<li className="list-group-item">{props.menu.item}</li>
+				{store.menu.map((menu, index) => (
+					<li className="list-group-item" key={index} menu={menu} />
+				))}
 			</ul>
 		</div>
 	);

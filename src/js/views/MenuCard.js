@@ -9,8 +9,6 @@ import FoodImg3 from "../../img/food-img-3.jpg";
 export function MenuCard(props) {
 	const { store, actions } = useContext(Context);
 
-	// let cart = actions.addToCart();
-
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
@@ -35,11 +33,11 @@ export function MenuCard(props) {
 
 	// TOTAL PRICE
 	let defaultTotalPrice = generalPrice * quantity;
-	console.log(defaultTotalPrice);
+	// console.log(defaultTotalPrice);
 	const [totalPrice, setTotalPrice] = useState(generalPrice);
 
-	const [addToCart, setAddToCart] = useState(false);
-	console.log(`Add to cart button click ? ${addToCart}`);
+	// const [addToCart, setAddToCart] = useState(false);
+	// console.log(`Add to cart button click ? ${addToCart}`);
 
 	function incrementQuentity() {
 		// EVERYTIME WHEN CLICK PLUS BUTTON IT WILL INCREMENT BY ONE
@@ -102,12 +100,9 @@ export function MenuCard(props) {
 									<button className="btn" onClick={decrementQuantity}>
 										-
 									</button>
-								</div>
-								<button onClick={() => addToCart()} className="btn btn-dark">
-									Add to cart
-								</button>
-							</div>
-							<button onClick={() => addToCart()} className="btn btn-dark mr-2">
+								</div> */}
+
+						<button className="btn btn-dark mr-2">
 							<button
 								onClick={() => {
 									let amount;
@@ -122,16 +117,16 @@ export function MenuCard(props) {
 									}
 									localStorage.setItem(props.menu.item, amount);
 									value = localStorage.getItem(props.menu.item);
-									console.log("UPDATED CART:", props.menu.item, props.menu.price);
+									console.log("UPDATED CART:", props.menu.item, props.menu.price * amount);
 								}}
 								className="btn btn-dark mr-2">
-								Add to Order ({cart.length})
+								Add to Order
 							</button>
-							<button onClick={() => removeFromCart()} className="btn btn-dark mr-2">
+							{/* <button onClick={() => removeFromCart()} className="btn btn-dark mr-2">
 								Remove
 							</button> */}
-					{/* </div> */}
-					{/* </div> */}
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
