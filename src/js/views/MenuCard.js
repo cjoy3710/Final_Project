@@ -41,7 +41,7 @@ export function MenuCard(props) {
 	const [addToCart, setAddToCart] = useState(false);
 	console.log(`Add to cart button click ? ${addToCart}`);
 
-	function incrementQuentaty() {
+	function incrementQuentity() {
 		// EVERYTIME WHEN CLICK PLUS BUTTON IT WILL INCREMENT BY ONE
 		// AND TOTAL PRICE WILL BE CHANGE
 		// PRICE * QUANITY = TOTAL
@@ -86,11 +86,17 @@ export function MenuCard(props) {
 						<h5 className="card-title">{props.menu.item}</h5>
 						<p className="card-text">${props.menu.price}</p>
 						<p className="card-text">{props.menu.description}</p>
-						{/* <div className="menu-card-buttons">
+					</div>
+					<div>
+						<button onClick={() => addToCart()} className="btn btn-dark menu-card-buttons">
+							Add to cart
+						</button>
+					</div>
+					{/* <div className="menu-card-buttons">
 							<div className="set-quan set-bg">
 								<div className="quantaty">{props.menu.item}</div> */}
-						{/* <div className="btns">
-									<button className="btn" onClick={incrementQuentaty}>
+					{/* <div className="btns">
+									<button className="btn" onClick={incrementQuantity}>
 										+
 									</button>
 									<button className="btn" onClick={decrementQuantity}>
@@ -124,11 +130,11 @@ export function MenuCard(props) {
 							<button onClick={() => removeFromCart()} className="btn btn-dark mr-2">
 								Remove
 							</button> */}
-					</div>
+					{/* </div> */}
+					{/* </div> */}
 				</div>
 			</div>
 		</div>
-		// </div>
 		// </div>
 	);
 }
