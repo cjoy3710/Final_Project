@@ -16,7 +16,6 @@ export function ProductExample(props) {
 		} else {
 			setCartItems([...cartItems, { product, qty: 1 }]);
 		}
-		console.log(addOn);
 	};
 	return (
 		<div>
