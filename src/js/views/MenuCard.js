@@ -25,12 +25,6 @@ export function MenuCard(props) {
 		quantity = 25;
 	}
 
-	// // DISCOUNT
-	// let dafaultDiscount = 5;
-	// // let defaultCouponDiscount = quantity * dafaultDiscount ;
-	// const [couponDiscount, setCouponDiscount] = useState(dafaultDiscount);
-	// console.log(couponDiscount);
-
 	// TOTAL PRICE
 	let defaultTotalPrice = generalPrice * quantity;
 	// console.log(defaultTotalPrice);
@@ -49,10 +43,6 @@ export function MenuCard(props) {
 	function decrementQuantity() {
 		setQuantity(prevQuantity => prevQuantity - 1);
 		setTotalPrice(prevPrice => prevPrice - generalPrice);
-	}
-	function handleClick(e) {
-		e.preventDefault();
-		setAddToCart(prevAddToCart => (prevAddToCart = true));
 	}
 
 	//
@@ -103,56 +93,31 @@ export function MenuCard(props) {
 									</button>
 								</div> */}
 
-<<<<<<< HEAD
 					<button className="btn btn-dark mr-2">
 						<button
-							onClick={() => {
-								let amount;
-								let value = localStorage.getItem(props.menu.item);
-
-								console.log("HELLO CART:", props.menu.item, value);
-								if (value === null || value === "0") {
-									amount = 1;
-								} else {
-									value = Number(value);
-									amount = value + 1;
-								}
-								localStorage.setItem(props.menu.item, amount);
-								value = localStorage.getItem(props.menu.item);
-								console.log("UPDATED CART:", props.menu.item, props.menu.price * amount);
+							onClick={e => {
+								e.preventDefault();
+								console.log("refresh");
+								addToCart(props.menu);
 							}}
+							// onClick={() => {
+							// 	let amount;
+							// 	let value = localStorage.getItem(props.menu.item);
+
+							// 	console.log("HELLO CART:", props.menu.item, value);
+							// 	if (value === null || value === "0") {
+							// 		amount = 1;
+							// 	} else {
+							// 		value = Number(value);
+							// 		amount = value + 1;
+							// 	}
+							// 	localStorage.setItem(props.menu.item, amount);
+							// 	value = localStorage.getItem(props.menu.item);
+							// 	console.log("UPDATED CART:", props.menu.item, props.menu.price * amount);
+							// }}
 							className="btn btn-dark mr-2">
 							Add to Order
 						</button>
-						{/* <button onClick={() => removeFromCart()} className="btn btn-dark mr-2">
-=======
-						<button className="btn btn-dark mr-2">
-							<button
-								onClick={() => {
-									addToCart(props.menu);
-								}}
-								// onClick={() => {
-								// 	let amount;
-								// 	let value = localStorage.getItem(props.menu.item);
-
-								// 	console.log("HELLO CART:", props.menu.item, value);
-								// 	if (value === null || value === "0") {
-								// 		amount = 1;
-								// 	} else {
-								// 		value = Number(value);
-								// 		amount = value + 1;
-								// 	}
-								// 	localStorage.setItem(props.menu.item, amount);
-								// 	value = localStorage.getItem(props.menu.item);
-								// 	console.log("UPDATED CART:", props.menu.item, props.menu.price * amount);
-								// }}
-								className="btn btn-dark mr-2">
-								Add to Order
-							</button>
-							{/* <button onClick={() => removeFromCart()} className="btn btn-dark mr-2">
->>>>>>> 89e29f3431f5735d1c0f7df00022e927b57f7c7c
-								Remove
-							</button> */}
 					</button>
 				</div>
 			</div>
