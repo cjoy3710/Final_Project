@@ -140,7 +140,11 @@ const getState = ({ getStore, getActions, setStore }) => {
                     setstore()
                 */
 				const store = getStore();
-				setStore({ cart: store.cart.filter((e, i) => i !== index) });
+				setStore({ cart: store.cart.filter((e, i) => i !== index - 1) });
+				// setStore({});
+				// const handleDelete = todo => {
+				// const filteredCart = store.cart.filter((e, i) => i !== index);
+				// setStore(store);
 			},
 			changeColor: (index, color) => {
 				//get the store
