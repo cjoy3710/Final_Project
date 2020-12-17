@@ -60,10 +60,11 @@ export function MenuCard(props) {
 
 	// const [cart, setCart] = useState([]);
 
-	// const addToCart = menu => {
-	// 	// console.log("we are in business");
-	// 	setCart([...cart, menu]);
-	// };
+	const addToCart = menu => {
+		// console.log("we are in business");
+		// setCart([...cart, menu]);
+		actions.addToCart(menu);
+	};
 	// const removeFromCart = menuToRemove => {
 	// 	setCart(cart.filter(menu => menu !== menuToRemove));
 	// };
@@ -99,20 +100,23 @@ export function MenuCard(props) {
 						<button className="btn btn-dark mr-2">
 							<button
 								onClick={() => {
-									let amount;
-									let value = localStorage.getItem(props.menu.item);
-
-									console.log("HELLO CART:", props.menu.item, value);
-									if (value === null || value === "0") {
-										amount = 1;
-									} else {
-										value = Number(value);
-										amount = value + 1;
-									}
-									localStorage.setItem(props.menu.item, amount);
-									value = localStorage.getItem(props.menu.item);
-									console.log("UPDATED CART:", props.menu.item, props.menu.price * amount);
+									addToCart(props.menu);
 								}}
+								// onClick={() => {
+								// 	let amount;
+								// 	let value = localStorage.getItem(props.menu.item);
+
+								// 	console.log("HELLO CART:", props.menu.item, value);
+								// 	if (value === null || value === "0") {
+								// 		amount = 1;
+								// 	} else {
+								// 		value = Number(value);
+								// 		amount = value + 1;
+								// 	}
+								// 	localStorage.setItem(props.menu.item, amount);
+								// 	value = localStorage.getItem(props.menu.item);
+								// 	console.log("UPDATED CART:", props.menu.item, props.menu.price * amount);
+								// }}
 								className="btn btn-dark mr-2">
 								Add to Order
 							</button>

@@ -10,6 +10,8 @@ export function Menu() {
 	const [cart, setCart] = useState([]);
 	// let total = actions.getTotal();
 
+	console.log(store.cart);
+
 	return (
 		<div>
 			<h2 className="menu-heading">Seasonal Winter Menu</h2>

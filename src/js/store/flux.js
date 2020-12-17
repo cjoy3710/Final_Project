@@ -123,12 +123,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getUs: () => {
 				return getStore().us;
 			},
-
-			// addToCart: item => {
-			// 	let store = getStore();
-			// 	store.cart.push(item);
-			// 	setStore(store);
-			// },
+			addToCart: item => {
+				let store = getStore();
+				store.cart.push(item);
+				setStore(store);
+			},
+			getCart: () => {
+				return getStore().cart;
+			},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

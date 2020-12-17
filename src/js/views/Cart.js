@@ -10,11 +10,20 @@ export function Cart() {
 	const { store, actions } = useContext(Context);
 
 	let [checkout, setCheckOut] = useState(false);
+	let currentCart = actions.getCart();
+	console.log(currentCart);
+
+	let totalPrice = 0;
+	let calculateTotal = () => {
+		//map over the currentCart, and add the values to total
+	};
 
 	return (
 		<div>
 			<div className="row justify-content-center">
+				{/* map over cart to create the individual items */}
 				<CartCard />
+				{/* call the calculate total */}
 			</div>
 			<div>
 				{checkout ? (
