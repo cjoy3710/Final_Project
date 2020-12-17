@@ -43,7 +43,9 @@ export const Navbar3 = () => {
 				<Nav className="mr-auto menu-bar">
 					<Nav.Link href="/">Home</Nav.Link>
 					<Nav.Link href="/aboutus">About Us</Nav.Link>
-					<Nav.Link href="/menu">Menu / Order</Nav.Link>
+					<Nav.Link as={Link} to="/menu">
+						Menu / Order
+					</Nav.Link>
 					<Nav.Link href="/cart">Cart</Nav.Link>
 					{/* </Nav>
 				<Nav> */}

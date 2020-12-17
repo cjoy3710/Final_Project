@@ -25,12 +25,6 @@ export function MenuCard(props) {
 		quantity = 25;
 	}
 
-	// // DISCOUNT
-	// let dafaultDiscount = 5;
-	// // let defaultCouponDiscount = quantity * dafaultDiscount ;
-	// const [couponDiscount, setCouponDiscount] = useState(dafaultDiscount);
-	// console.log(couponDiscount);
-
 	// TOTAL PRICE
 	let defaultTotalPrice = generalPrice * quantity;
 	// console.log(defaultTotalPrice);

@@ -123,14 +123,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getUs: () => {
 				return getStore().us;
 			},
+
 			addToCart: item => {
 				let store = getStore();
-				store.cart.push(item);
-				setStore(store);
+				// store.cart.push(item);
+				setStore({ cart: store.cart.concat(item) });
 			},
 			getCart: () => {
 				return getStore().cart;
-			},
+            },
+            removeFromCart: (index) => {
+                /* loop through cart array
+                    remove the element with the index - array.splice
+                    setstore()
+                */
+            },
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

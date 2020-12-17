@@ -16,14 +16,23 @@ export function Cart() {
 	let totalPrice = 0;
 	let calculateTotal = () => {
 		//map over the currentCart, and add the values to total
+		currentCart.map((menuItem, index) => {
+			totalPrice += parseInt(menuItem.price);
+		});
+		return totalPrice;
 	};
 
 	return (
 		<div>
 			<div className="row justify-content-center">
 				{/* map over cart to create the individual items */}
-				<CartCard />
-				{/* call the calculate total */}
+				{/* <CartCard /> */}
+				{currentCart.map((menuItem, index) => (
+					// <li className="list-group-item" key={index} cart={cart} />
+					<CartCard key={index} menuItem={menuItem} />
+				))}
+				<div />
+				{calculateTotal()}
 			</div>
 			<div>
 				{checkout ? (
@@ -68,3 +77,7 @@ export function Cart() {
 // // 		<MenuCard key={index} menu={menu} />
 // // 	))}
 // // </div> */
+Cart.propTypes = {
+	menu: PropTypes.object,
+	cart: PropTypes.object
+};
