@@ -29,7 +29,7 @@ export const Navbar3 = () => {
 
 	return (
 		<Navbar collapseOnSelect expand="lg" variant="dark" className="main-navbar">
-			<Navbar.Brand href="/">
+			<Navbar.Brand as={Link} to="/">
 				<img
 					src={CDELogo}
 					width="100px"
@@ -41,12 +41,18 @@ export const Navbar3 = () => {
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<Nav className="mr-auto menu-bar">
-					<Nav.Link href="/">Home</Nav.Link>
-					<Nav.Link href="/aboutus">About Us</Nav.Link>
+					<Nav.Link as={Link} to="/">
+						Home
+					</Nav.Link>
+					<Nav.Link as={Link} to="/aboutus">
+						About Us
+					</Nav.Link>
 					<Nav.Link as={Link} to="/menu">
 						Menu / Order
 					</Nav.Link>
-					<Nav.Link href="/cart">Cart</Nav.Link>
+					<Nav.Link as={Link} to="/cart">
+						Cart
+					</Nav.Link>
 					{/* </Nav>
 				<Nav> */}
 					{/* <Nav.Link href="#deets">More deets</Nav.Link> */}
