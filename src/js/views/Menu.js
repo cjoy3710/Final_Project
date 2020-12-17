@@ -7,10 +7,8 @@ import { Context } from "../store/appContext";
 
 export function Menu() {
 	const { store, actions } = useContext(Context);
-	const [cart, setCart] = useState([]);
+	let currentCart = actions.getCart();
 	// let total = actions.getTotal();
-
-	console.log(store.cart);
 
 	return (
 		<div>
@@ -24,7 +22,9 @@ export function Menu() {
 			{/* <h2 className="order-total m-5">Order Total: ${}</h2> */}
 			<div className="row justify-content-center">
 				<Link to="/cart">
-					<button className="btn btn-lg btn-dark place-order-btn mb-5">Ready to Order </button>
+					<button className="btn btn-lg btn-dark place-order-btn mb-5">
+						Ready to Order ({currentCart.length})
+					</button>
 				</Link>
 			</div>
 		</div>
