@@ -14,7 +14,6 @@ export function Cart() {
 	console.log(currentCart);
 
 	let totalPrice = 0;
-	let subTotal = 0;
 	let tax = 0.07;
 	let calculateSubTotal = () => {
 		currentCart.map((menuItem, index) => {
@@ -39,20 +38,24 @@ export function Cart() {
 				<div className="text-light">{currentCart.length > 0 && <div>Total: ${}</div>}</div>
 			</div>
 			<div>
-				{checkout ? (
-					<PaypalButtons />
-				) : (
-					// <div ref={paypalRef} />
-					<button
-						className="btn
-					btn-dark
-					
-					cart-btn"
-						onClick={() => {
-							setCheckOut(true);
-						}}>
-						Checkout
-					</button>
+				{currentCart.length > 0 && (
+					<div>
+						{checkout ? (
+							<PaypalButtons />
+						) : (
+							// <div ref={paypalRef} />
+							<button
+								className="btn
+                                btn-dark
+                                
+                                cart-btn"
+								onClick={() => {
+									setCheckOut(true);
+								}}>
+								Checkout
+							</button>
+						)}
+					</div>
 				)}
 			</div>
 		</div>

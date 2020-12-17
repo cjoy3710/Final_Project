@@ -127,8 +127,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			addToCart: item => {
 				let store = getStore();
-				// store.cart.push(item);
-				setStore({ cart: store.cart.concat(item) });
+				store.cart.push(item);
+				setStore(store);
+				// setStore({ cart: store.cart.concat(item) });
 			},
 			getCart: () => {
 				return getStore().cart;
