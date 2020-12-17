@@ -5,9 +5,10 @@ import { Context } from "../store/appContext";
 export const CartCard = props => {
 	// const [cart, setCart] = useState([]);
 	const { store, actions } = useContext(Context);
+	let currentCart = actions.getCart();
 
-	const removeFromCart = id => {
-		actions.removeFromCart(id);
+	const removeFromCart = index => {
+		actions.removeFromCart(index);
 	};
 
 	return (
@@ -18,6 +19,7 @@ export const CartCard = props => {
 					<li className="list-group-item" key={index} cart={cart} />
 				))} */}
 			{/* </ul> */}
+			<div>{currentCart.length === 0 && <div>Cart is empty</div>}</div>
 			<h1>{props.menuItem.item}</h1>
 			<h6>${props.menuItem.price}</h6>
 			<button

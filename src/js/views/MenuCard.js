@@ -97,6 +97,7 @@ export function MenuCard(props) {
 						<button
 							onClick={e => {
 								e.preventDefault();
+								console.log(props.menu.id);
 								addToCart(props.menu);
 							}}
 							// onClick={() => {

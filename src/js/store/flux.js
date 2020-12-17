@@ -133,13 +133,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getCart: () => {
 				return getStore().cart;
 			},
-			removeFromCart: id => {
+			removeFromCart: index => {
 				/* loop through cart array
                     remove the element with the index - array.splice
                     setstore()
                 */
 				const store = getStore();
-				setStore({ cart: store.cart.filter(e => e.id !== id) });
+				setStore({ cart: store.cart.filter((e, i) => i !== index) });
 			},
 			changeColor: (index, color) => {
 				//get the store

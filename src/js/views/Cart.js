@@ -14,24 +14,29 @@ export function Cart() {
 	console.log(currentCart);
 
 	let totalPrice = 0;
+	let subTotal = 0;
 	let tax = 0.07;
-	let calculateTotal = () => {
+	let calculateSubTotal = () => {
 		currentCart.map((menuItem, index) => {
 			totalPrice += parseInt(menuItem.price);
 		});
-		return (totalPrice += totalPrice * tax);
+		return totalPrice;
 	};
 
 	return (
 		<div>
-			<div className="row justify-content-center">
-				{/* map over cart to create the individual items */}
-				{/* <CartCard /> */}
+			<div className="col justify-content-center">
 				{currentCart.map((menuItem, index) => (
-					// <li className="list-group-item" key={index} cart={cart} />
 					<CartCard key={index} menuItem={menuItem} />
 				))}
-				<div />${calculateTotal().toFixed(2)}
+				<div className="text-light">{currentCart.length === 0 && <div>Your cart is empty</div>}</div>
+				<div className="text-light">
+					{currentCart.length > 0 && <div>Subtotal: ${calculateSubTotal()}</div>}
+				</div>
+				<div className="text-light">
+					{currentCart.length > 0 && <div>Tax: ${(calculateSubTotal() * tax).toFixed(2)}</div>}
+				</div>
+				<div className="text-light">{currentCart.length > 0 && <div>Total: ${}</div>}</div>
 			</div>
 			<div>
 				{checkout ? (
