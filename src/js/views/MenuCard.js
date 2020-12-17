@@ -97,7 +97,6 @@ export function MenuCard(props) {
 						<button
 							onClick={e => {
 								e.preventDefault();
-								console.log("refresh");
 								addToCart(props.menu);
 							}}
 							// onClick={() => {

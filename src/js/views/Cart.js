@@ -14,12 +14,12 @@ export function Cart() {
 	console.log(currentCart);
 
 	let totalPrice = 0;
+	let tax = 0.07;
 	let calculateTotal = () => {
-		//map over the currentCart, and add the values to total
 		currentCart.map((menuItem, index) => {
 			totalPrice += parseInt(menuItem.price);
 		});
-		return totalPrice;
+		return (totalPrice += totalPrice * tax);
 	};
 
 	return (
@@ -31,8 +31,7 @@ export function Cart() {
 					// <li className="list-group-item" key={index} cart={cart} />
 					<CartCard key={index} menuItem={menuItem} />
 				))}
-				<div />
-				{calculateTotal()}
+				<div />${calculateTotal().toFixed(2)}
 			</div>
 			<div>
 				{checkout ? (

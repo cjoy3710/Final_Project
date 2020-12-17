@@ -1,6 +1,7 @@
 import rigoImage from "../../img/rigo-baby.jpg";
 import profilePic from "../../img/profile-pic.png";
 import { useState } from "react";
+import { element } from "prop-types";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -132,11 +133,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getCart: () => {
 				return getStore().cart;
 			},
-			removeFromCart: index => {
+			removeFromCart: id => {
 				/* loop through cart array
                     remove the element with the index - array.splice
                     setstore()
                 */
+				const store = getStore();
+				setStore({ cart: store.cart.filter(e => e.id !== id) });
 			},
 			changeColor: (index, color) => {
 				//get the store

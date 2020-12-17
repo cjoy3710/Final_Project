@@ -8,6 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import app from "../../base";
 import { AuthContext } from "../store/AuthContext.js";
+import { Context } from "../store/appContext";
 
 export const Navbar3 = () => {
 	const [show, setShow] = useState(false);
@@ -16,6 +17,8 @@ export const Navbar3 = () => {
 
 	let logout = "";
 	const { currentUser } = useContext(AuthContext);
+	const { store, actions } = useContext(Context);
+	let currentCart = actions.getCart();
 
 	if (currentUser) {
 		logout = (
@@ -51,7 +54,7 @@ export const Navbar3 = () => {
 						Menu / Order
 					</Nav.Link>
 					<Nav.Link as={Link} to="/cart">
-						Cart
+						Cart ({currentCart.length})
 					</Nav.Link>
 					{/* </Nav>
 				<Nav> */}
