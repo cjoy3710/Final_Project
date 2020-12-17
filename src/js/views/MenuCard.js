@@ -33,7 +33,7 @@ export function MenuCard(props) {
 	// const [addToCart, setAddToCart] = useState(false);
 	// console.log(`Add to cart button click ? ${addToCart}`);
 
-	function incrementQuentaty() {
+	function incrementQuentity() {
 		// EVERYTIME WHEN CLICK PLUS BUTTON IT WILL INCREMENT BY ONE
 		// AND TOTAL PRICE WILL BE CHANGE
 		// PRICE * QUANITY = TOTAL
@@ -43,10 +43,6 @@ export function MenuCard(props) {
 	function decrementQuantity() {
 		setQuantity(prevQuantity => prevQuantity - 1);
 		setTotalPrice(prevPrice => prevPrice - generalPrice);
-	}
-	function handleClick(e) {
-		e.preventDefault();
-		setAddToCart(prevAddToCart => (prevAddToCart = true));
 	}
 
 	//
@@ -79,11 +75,17 @@ export function MenuCard(props) {
 						<h5 className="card-title">{props.menu.item}</h5>
 						<p className="card-text">${props.menu.price}</p>
 						<p className="card-text">{props.menu.description}</p>
-						{/* <div className="menu-card-buttons">
+					</div>
+					{/* <div>
+						<button onClick={() => addToCart()} className="btn btn-dark menu-card-buttons">
+							Add to cart
+						</button>
+					</div> */}
+					{/* <div className="menu-card-buttons">
 							<div className="set-quan set-bg">
 								<div className="quantaty">{props.menu.item}</div> */}
-						{/* <div className="btns">
-									<button className="btn" onClick={incrementQuentaty}>
+					{/* <div className="btns">
+									<button className="btn" onClick={incrementQuantity}>
 										+
 									</button>
 									<button className="btn" onClick={decrementQuantity}>
@@ -91,34 +93,32 @@ export function MenuCard(props) {
 									</button>
 								</div> */}
 
-						<button className="btn btn-dark mr-2">
-							<button
-								onClick={() => {
-									addToCart(props.menu);
-								}}
-								// onClick={() => {
-								// 	let amount;
-								// 	let value = localStorage.getItem(props.menu.item);
+					<button className="btn btn-dark mr-2">
+						<button
+							onClick={e => {
+								e.preventDefault();
+								console.log("refresh");
+								addToCart(props.menu);
+							}}
+							// onClick={() => {
+							// 	let amount;
+							// 	let value = localStorage.getItem(props.menu.item);
 
-								// 	console.log("HELLO CART:", props.menu.item, value);
-								// 	if (value === null || value === "0") {
-								// 		amount = 1;
-								// 	} else {
-								// 		value = Number(value);
-								// 		amount = value + 1;
-								// 	}
-								// 	localStorage.setItem(props.menu.item, amount);
-								// 	value = localStorage.getItem(props.menu.item);
-								// 	console.log("UPDATED CART:", props.menu.item, props.menu.price * amount);
-								// }}
-								className="btn btn-dark mr-2">
-								Add to Order
-							</button>
-							{/* <button onClick={() => removeFromCart()} className="btn btn-dark mr-2">
-								Remove
-							</button> */}
+							// 	console.log("HELLO CART:", props.menu.item, value);
+							// 	if (value === null || value === "0") {
+							// 		amount = 1;
+							// 	} else {
+							// 		value = Number(value);
+							// 		amount = value + 1;
+							// 	}
+							// 	localStorage.setItem(props.menu.item, amount);
+							// 	value = localStorage.getItem(props.menu.item);
+							// 	console.log("UPDATED CART:", props.menu.item, props.menu.price * amount);
+							// }}
+							className="btn btn-dark mr-2">
+							Add to Order
 						</button>
-					</div>
+					</button>
 				</div>
 			</div>
 		</div>
