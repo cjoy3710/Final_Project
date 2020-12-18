@@ -5,6 +5,7 @@ import FoodImg4 from "../../img/food-img-4.jpg";
 import FoodImg5 from "../../img/food-img-5.jpg";
 import "../../styles/index.scss";
 import Carousel from "react-bootstrap/Carousel";
+import { Footer } from "../component/footer";
 
 export const Home = () => (
 	<div>
@@ -30,5 +31,6 @@ export const Home = () => (
 				</Carousel.Caption> */}
 			</Carousel.Item>
 		</Carousel>
+		<Footer />
 	</div>
 );

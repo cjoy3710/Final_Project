@@ -161,13 +161,31 @@ body{
     width: 28rem !important;
     border-radius: 0px !important;
     padding: 5px;
+    
+}
+
+.menu-item-text{
+     margin-top: 5px;
 }
 
 .remove-item-btn{
+    
     width: 10rem;
     position: absolute;
     left: 80%;
     top: 50%;
     transform: translate(-50%, -50%);
     
+}
+
+////////////////////////Footer////////////////////////
+
+.social-icons{
+    color: white !important;
+    font-size: 30px !important;
+    margin: 15px;
+}
+
+.contact-info{
+    color: white;
 }

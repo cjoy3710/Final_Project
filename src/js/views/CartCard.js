@@ -24,10 +24,10 @@ export const CartCard = props => {
 				))} */}
 				{/* </ul> */}
 				<div>{currentCart.length === 0 && <div>Cart is empty</div>}</div>
-				<h6>
-					{props.index + 1}) {props.menuItem.item}
+				<h6 className="menu-item-text">
+					{props.index + 1}) {props.menuItem.item} ${props.menuItem.price}
 				</h6>
-				<h6>${props.menuItem.price}</h6>
+
 				<button
 					className="btn btn-dark btn-small remove-item-btn"
 					onClick={() => {
