@@ -13,21 +13,30 @@ export function Cart() {
 	let currentCart = actions.getCart();
 	console.log(currentCart);
 
+	let subtotalPrice = 0;
+	const tax = 0.07;
 	let totalPrice = 0;
-	let tax = 0.07;
 	let taxPrice = 0;
-	let calculateSubTotal = () => {
+
+	const calculateSubTotal = () => {
 		currentCart.map((menuItem, index) => {
-			totalPrice += parseInt(menuItem.price);
+			subtotalPrice += parseInt(menuItem.price);
 		});
-		return totalPrice;
+		return subtotalPrice;
 	};
-	let calculateTotal = () => {
+	let calculateTaxes = () => {
 		currentCart.map((menuItem, index) => {
 			taxPrice += parseInt(menuItem.price);
 		});
 
 		return (taxPrice = taxPrice * tax);
+	};
+	let calculateTotal = () => {
+		currentCart.map((menuItem, index) => {
+			totalPrice += parseInt(menuItem.price);
+		});
+
+		return (totalPrice += totalPrice * tax);
 	};
 
 	return (
@@ -42,7 +51,7 @@ export function Cart() {
 					{currentCart.length > 0 && (
 						<div className="text-light">
 							<div>Subtotal: ${calculateSubTotal()}</div>
-							<div>Tax: ${(calculateSubTotal() * tax).toFixed(2)}</div>
+							<div>Tax: ${calculateTaxes().toFixed(2)}</div>
 							<div>Total: ${calculateTotal().toFixed(2)}</div>
 						</div>
 					)}
