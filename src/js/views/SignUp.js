@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import app from "../../base";
 import Login from "./Login";
@@ -55,6 +55,14 @@ const SignUp = ({ history }) => {
 					<button type="submit" className="btn btn-dark submit-btn">
 						Sign up
 					</button>
+					<div>
+						<p className="signup-link">
+							I already have an account.{" "}
+							<Link to="/Login">
+								<span>Back to login.</span>
+							</Link>
+						</p>
+					</div>
 				</form>
 				{/* <h1 classNameName="login-heading">Login</h1>
 				<form>
