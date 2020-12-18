@@ -15,6 +15,7 @@ export function Cart() {
 
 	let totalPrice = 0;
 	let tax = 0.07;
+	let taxPrice = 0;
 	let calculateSubTotal = () => {
 		currentCart.map((menuItem, index) => {
 			totalPrice += parseInt(menuItem.price);
@@ -23,9 +24,10 @@ export function Cart() {
 	};
 	let calculateTotal = () => {
 		currentCart.map((menuItem, index) => {
-			totalPrice += parseInt(menuItem.price);
+			taxPrice += parseInt(menuItem.price);
 		});
-		return (totalPrice += totalPrice * tax);
+
+		return (taxPrice += taxPrice * tax);
 	};
 
 	return (
