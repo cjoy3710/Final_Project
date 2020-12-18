@@ -12,19 +12,19 @@ export function Menu() {
 
 	return (
 		<div>
-			<h2 className="menu-heading">Seasonal Winter Menu</h2>
-			<div className="row menu-page ">
-				{/* <MenuCard /> */}
-				{store.menu.map((menu, index) => (
-					<MenuCard key={index} menu={menu} />
-				))}
+			<div className="row justify-content-center">
+				<h2 className="menu-heading">Seasonal Winter Menu</h2>
+				<div className="row menu-page ">
+					{/* <MenuCard /> */}
+					{store.menu.map((menu, index) => (
+						<MenuCard key={index} menu={menu} />
+					))}
+				</div>
 			</div>
 			{/* <h2 className="order-total m-5">Order Total: ${}</h2> */}
 			<div className="row justify-content-center">
 				<Link to="/cart">
-					<button className="btn btn-lg btn-dark place-order-btn mb-5">
-						Ready to Order ({currentCart.length})
-					</button>
+					<button className="btn btn-lg place-order-btn mb-5">Ready to Order ({currentCart.length})</button>
 				</Link>
 			</div>
 		</div>

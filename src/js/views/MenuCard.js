@@ -93,32 +93,32 @@ export function MenuCard(props) {
 									</button>
 								</div> */}
 
-					<button className="btn btn-dark mr-2">
-						<button
-							onClick={e => {
-								e.preventDefault();
-								console.log(props.menu.id);
-								addToCart(props.menu);
-							}}
-							// onClick={() => {
-							// 	let amount;
-							// 	let value = localStorage.getItem(props.menu.item);
+					{/* <button className="btn btn-dark mr-2"> */}
+					<button
+						onClick={e => {
+							e.preventDefault();
+							console.log(props.menu.id);
+							addToCart(props.menu);
+						}}
+						// onClick={() => {
+						// 	let amount;
+						// 	let value = localStorage.getItem(props.menu.item);
 
-							// 	console.log("HELLO CART:", props.menu.item, value);
-							// 	if (value === null || value === "0") {
-							// 		amount = 1;
-							// 	} else {
-							// 		value = Number(value);
-							// 		amount = value + 1;
-							// 	}
-							// 	localStorage.setItem(props.menu.item, amount);
-							// 	value = localStorage.getItem(props.menu.item);
-							// 	console.log("UPDATED CART:", props.menu.item, props.menu.price * amount);
-							// }}
-							className="btn btn-dark mr-2">
-							Add to Order
-						</button>
+						// 	console.log("HELLO CART:", props.menu.item, value);
+						// 	if (value === null || value === "0") {
+						// 		amount = 1;
+						// 	} else {
+						// 		value = Number(value);
+						// 		amount = value + 1;
+						// 	}
+						// 	localStorage.setItem(props.menu.item, amount);
+						// 	value = localStorage.getItem(props.menu.item);
+						// 	console.log("UPDATED CART:", props.menu.item, props.menu.price * amount);
+						// }}
+						className="btn btn-dark add-to-order-btn">
+						Add to Order
 					</button>
+					{/* </button> */}
 				</div>
 			</div>
 		</div>

@@ -14,9 +14,6 @@
 
 
 .menu-bar {
-//   position: absolute;
-//   top: 5px;
-//   right: 5px;
   color: white;
   font-family:'Josefin Sans', sans-serif !important;
   font-weight: bold;
@@ -57,19 +54,16 @@ body{
     
 }
 
-//menu page / card-deck
+///////////////////////////////////////////menu page ////////////////////////////////////////
+
 .card-deck{
     display: flex;
     margin-left: 100px;
     height: 500px;
-    padding: 25px; 
-    
-    
+    padding: 25px;   
 }
 
-
 .menu-heading{
-    text-align: center;
     color: white;
 }
 
@@ -78,31 +72,34 @@ body{
     
 }
 
-.place-order-btn{
-    margin-left: 100px;
+.add-to-order-btn{
+    width: 10rem;
+    margin: auto;
+    margin-bottom: 1rem;
 }
 
-.order-total{
-    color: white;
-    text-align: center;
+.place-order-btn{
+    background: white !important;
+    color: black !important;
 }
+
 
 .modal-open{
     text-align:center;
 }
 
-//about us page
+//////////////////////////////// About us page //////////////////////////////////////////////////////////
 
 .about-heading {
     color: white;
     margin: 30px;
+
 }
 
 .about-bio{
     color: white;
     max-width: 600px;
     margin: 20px;
-
 
 }
 
@@ -114,7 +111,7 @@ body{
  
 }
 
-// Login and SignUp Pages
+/////////////////////////////////// Login and SignUp Pages ///////////////////////////////////////////////////////////
 
 .login-form{
     height: 400px;
@@ -122,6 +119,7 @@ body{
     background: white;
     color: black;
     margin: auto;
+    border-radius: 10px;
 }
 
 .label{
@@ -140,7 +138,3 @@ body{
     margin-top: 20px;
 }
 
-// //cart and checkout
-// .cart-btn {
-
-// }

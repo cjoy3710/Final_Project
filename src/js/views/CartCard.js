@@ -23,7 +23,9 @@ export const CartCard = props => {
 				))} */}
 			{/* </ul> */}
 			<div>{currentCart.length === 0 && <div>Cart is empty</div>}</div>
-			<h1>{props.menuItem.item}</h1>
+			<h5>
+				{props.index + 1}) {props.menuItem.item}
+			</h5>
 			<h6>${props.menuItem.price}</h6>
 			<button
 				onClick={() => {
