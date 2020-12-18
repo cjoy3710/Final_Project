@@ -20,6 +20,7 @@ import injectContext from "./store/appContext";
 import Data from "./store/Data";
 import { MainExample } from "./views/MainExample";
 import { BasketExample } from "./views/BasketExample";
+import { GoogleMaps } from "./views/GoogleMaps";
 
 // import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -59,6 +60,7 @@ const Layout = () => {
 							</Route>
 							<Route exact path="/cart">
 								<Cart />
+								{/* <GoogleMaps /> */}
 							</Route>
 						</Switch>
 						{/* <Footer /> */}
