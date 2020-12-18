@@ -27,14 +27,14 @@ export function Cart() {
 			taxPrice += parseInt(menuItem.price);
 		});
 
-		return (taxPrice += taxPrice * tax);
+		return (taxPrice = taxPrice * tax);
 	};
 
 	return (
 		<div>
 			<div className="col justify-content-center">
 				{currentCart.map((menuItem, index) => (
-					<CartCard key={index} menuItem={menuItem} />
+					<CartCard key={index} menuItem={menuItem} index={index} />
 				))}
 				<div className="text-light">{currentCart.length === 0 && <div>Your cart is empty</div>}</div>
 

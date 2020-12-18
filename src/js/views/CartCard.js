@@ -27,7 +27,7 @@ export const CartCard = props => {
 			<h6>${props.menuItem.price}</h6>
 			<button
 				onClick={() => {
-					removeFromCart(props.menuItem.id);
+					removeFromCart(props.index);
 				}}>
 				Remove Item
 			</button>
@@ -35,5 +35,6 @@ export const CartCard = props => {
 	);
 };
 CartCard.propTypes = {
-	menuItem: PropTypes.object
+	menuItem: PropTypes.object,
+	index: PropTypes.number
 };
