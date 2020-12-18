@@ -20,12 +20,20 @@ export const CartCard = props => {
 		setComment(updatedComment);
 	};
 
-	// little change
-	// little change
+	const addToCart = menu => {
+		actions.addToCart(menu);
+	};
 
 	const removeFromCart = index => {
 		actions.removeFromCart(index);
 	};
+
+	let [count, setCount] = useState(0);
+	if (count < 1) {
+		count = 0;
+	} else if (count > 25) {
+		count = 25;
+	}
 
 	return (
 		<div className="row justify-content-center">
@@ -63,6 +71,7 @@ export const CartCard = props => {
 							</span>
 						))}
 					</form>
+
 					<button
 						className="btn btn-dark btn-small remove-item-btn"
 						onClick={() => {
