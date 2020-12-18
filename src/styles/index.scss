@@ -1,4 +1,4 @@
-
+////////////////////////////////////////Navbar////////////////////////////////////////////
 
 .card{
     width: 18rem;
@@ -26,14 +26,6 @@
 }
 
 
-
-// .logout-button {
-//     background: none!important;
-//   border: none;
-//   padding: 0!important;
-//    color: #607D8B !important;
-// }
-
 .img-responsive{
     max-width: 100%;
     height: auto;
@@ -54,7 +46,9 @@ body{
     
 }
 
-///////////////////////////////////////////menu page ////////////////////////////////////////
+///////////////////////////////////////////menu page ////////////////////////////////////////////////
+
+
 
 .card-deck{
     display: flex;
@@ -78,17 +72,13 @@ body{
     margin-bottom: 1rem;
 }
 
-.place-order-btn{
-    background: white !important;
-    color: black !important;
-}
-
-
 .modal-open{
     text-align:center;
 }
 
+
 //////////////////////////////// About us page //////////////////////////////////////////////////////////
+
 
 .about-heading {
     color: white;
@@ -138,7 +128,7 @@ body{
     margin-top: 20px;
 }
 
-///////////////////////////////////////////Cart Page ////////////////////////////////////////
+///////////////////////////////////////////Cart Page /////////////////////////////////////////////////
 
 .empty-cart{
  font-weight: 600;   
@@ -159,8 +149,8 @@ body{
     display:flex;
     margin: 3px;
     width: 28rem !important;
-    border-radius: 0px !important;
-    padding: 5px;
+    border-radius: 10px !important;
+    padding: 8px;
     
 }
 
@@ -177,15 +167,28 @@ body{
     transform: translate(-50%, -50%);
     
 }
+.input{
+    border-radius: 10px;
+    width: 14rem;
+}
 
-////////////////////////Footer////////////////////////
+///////////////////////////////////Footer//////////////////////////////////////////////////////////
+
 
 .social-icons{
     color: white !important;
     font-size: 30px !important;
-    margin: 15px;
+    
+}
+
+.icon-1, .icon-2{
+    margin: 10px;
 }
 
 .contact-info{
+    margin-top: 50px;
     color: white;
+    font-size: 15px;
+    font-weight: bold;
 }
+

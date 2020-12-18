@@ -40,12 +40,12 @@ export const CartCard = props => {
 				<h6 className="menu-item-text">
 					{props.index + 1}) {props.menuItem.item} ${props.menuItem.price}
 				</h6>
-				<h6>${props.menuItem.price}</h6>
+
 				<div>
 					<form onSubmit={handleSubmit}>
 						<input
 							type="text"
-							className="input"
+							className="form-control input"
 							value={value}
 							placeholder="Special instructions..."
 							onChange={e => setValue(e.target.value)}
@@ -56,7 +56,7 @@ export const CartCard = props => {
 						{comment.map((comment, index) => (
 							<span key={index}>
 								<div className="container">
-									<p className="text-center">
+									<p className="special-instructions-text">
 										<strong>{comment.text}</strong>
 									</p>
 								</div>

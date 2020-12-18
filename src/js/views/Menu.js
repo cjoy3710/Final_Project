@@ -24,7 +24,9 @@ export function Menu() {
 			{/* <h2 className="order-total m-5">Order Total: ${}</h2> */}
 			<div className="row justify-content-center">
 				<Link to="/cart">
-					<button className="btn btn-lg place-order-btn mb-5">Ready to Order ({currentCart.length})</button>
+					<button className="btn btn-lg btn-dark place-order-btn mb-5">
+						Ready to Order ({currentCart.length})
+					</button>
 				</Link>
 			</div>
 		</div>
