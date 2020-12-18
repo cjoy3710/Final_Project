@@ -1,7 +1,23 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
+import { Context } from "../store/appContext";
+import calculateTotal from "../views/Cart";
 
 export function PaypalButtons() {
 	const paypalRef = useRef();
+	const { store, actions } = useContext(Context);
+	let subtotalPrice = 0;
+	const tax = 0.07;
+	let totalPrice = 0;
+	let taxPrice = 0;
+	let currentCart = actions.getCart();
+
+	let calculateTotal = () => {
+		currentCart.map((menuItem, index) => {
+			totalPrice += parseInt(menuItem.price);
+		});
+
+		return (totalPrice += totalPrice * tax);
+	};
 
 	useEffect(() => {
 		window.paypal
@@ -14,7 +30,7 @@ export function PaypalButtons() {
 								description: "Creative Dining Experience, LLC.",
 								amount: {
 									currency_code: "USD",
-									value: 6.0
+									value: calculateTotal()
 								}
 							}
 						]
