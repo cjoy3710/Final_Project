@@ -21,6 +21,12 @@ export function Cart() {
 		});
 		return totalPrice;
 	};
+	let calculateTotal = () => {
+		currentCart.map((menuItem, index) => {
+			totalPrice += parseInt(menuItem.price);
+		});
+		return (totalPrice += totalPrice * tax);
+	};
 
 	return (
 		<div>
@@ -29,13 +35,16 @@ export function Cart() {
 					<CartCard key={index} menuItem={menuItem} />
 				))}
 				<div className="text-light">{currentCart.length === 0 && <div>Your cart is empty</div>}</div>
-				<div className="text-light">
-					{currentCart.length > 0 && <div>Subtotal: ${calculateSubTotal()}</div>}
+
+				<div>
+					{currentCart.length > 0 && (
+						<div className="text-light">
+							<div>Subtotal: ${calculateSubTotal()}</div>
+							<div>Tax: ${(calculateSubTotal() * tax).toFixed(2)}</div>
+							<div>Total: ${calculateTotal().toFixed(2)}</div>
+						</div>
+					)}
 				</div>
-				<div className="text-light">
-					{currentCart.length > 0 && <div>Tax: ${(calculateSubTotal() * tax).toFixed(2)}</div>}
-				</div>
-				<div className="text-light">{currentCart.length > 0 && <div>Total: ${}</div>}</div>
 			</div>
 			<div>
 				{currentCart.length > 0 && (

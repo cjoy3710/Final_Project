@@ -7,6 +7,9 @@ export const CartCard = props => {
 	const { store, actions } = useContext(Context);
 	let currentCart = actions.getCart();
 
+	// little change
+	// little change
+
 	const removeFromCart = index => {
 		actions.removeFromCart(index);
 	};
