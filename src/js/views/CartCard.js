@@ -50,7 +50,7 @@ export const CartCard = props => {
 				</h6>
 
 				<div>
-					<form onSubmit={handleSubmit}>
+					{/* <form onSubmit={handleSubmit}>
 						<input
 							type="text"
 							className="form-control input"
@@ -58,9 +58,6 @@ export const CartCard = props => {
 							placeholder="Special instructions..."
 							onChange={e => setValue(e.target.value)}
 						/>
-						{/* <button className="btn btn-primary" type="submit">
-							Enter
-						</button> */}
 						{comment.map((comment, index) => (
 							<span key={index}>
 								<div className="container">
@@ -70,7 +67,7 @@ export const CartCard = props => {
 								</div>
 							</span>
 						))}
-					</form>
+					</form> */}
 
 					<button
 						className="btn btn-dark btn-small remove-item-btn"
