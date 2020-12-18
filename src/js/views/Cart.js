@@ -41,23 +41,28 @@ export function Cart() {
 
 	return (
 		<div>
-			<div className="col justify-content-center">
-				{currentCart.map((menuItem, index) => (
-					<CartCard key={index} menuItem={menuItem} index={index} />
-				))}
-				<div className="text-light">{currentCart.length === 0 && <div>Your cart is empty</div>}</div>
+			<div className="row justify-content-center">
+				<div className="col justify-content-center">
+					{currentCart.map((menuItem, index) => (
+						<CartCard key={index} menuItem={menuItem} index={index} />
+					))}
+					<div className="empty-cart text-center text-light">
+						{currentCart.length === 0 && <div>Your cart is empty</div>}
+					</div>
 
-				<div>
-					{currentCart.length > 0 && (
-						<div className="text-light">
-							<div>Subtotal: ${calculateSubTotal()}</div>
-							<div>Tax: ${calculateTaxes().toFixed(2)}</div>
-							<div>Total: ${calculateTotal().toFixed(2)}</div>
-						</div>
-					)}
+					<div>
+						{currentCart.length > 0 && (
+							<div className="text-light text-center menu-totals">
+								<h1>Order Summary</h1>
+								<div>Subtotal: ${calculateSubTotal()}</div>
+								<div>Tax: ${calculateTaxes().toFixed(2)}</div>
+								<div>Total: ${calculateTotal().toFixed(2)}</div>
+							</div>
+						)}
+					</div>
 				</div>
 			</div>
-			<div>
+			<div className="row justify-content-center">
 				{currentCart.length > 0 && (
 					<div>
 						{checkout ? (
@@ -68,11 +73,11 @@ export function Cart() {
 								className="btn
                                 btn-dark
                                 
-                                cart-btn"
+                                checkout-btn"
 								onClick={() => {
 									setCheckOut(true);
 								}}>
-								Checkout
+								Checkout and Pay
 							</button>
 						)}
 					</div>

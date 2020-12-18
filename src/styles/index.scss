@@ -138,3 +138,36 @@ body{
     margin-top: 20px;
 }
 
+///////////////////////////////////////////Cart Page ////////////////////////////////////////
+
+.empty-cart{
+ font-weight: 600;   
+  font-size: 200%;
+}
+
+.menu-totals{
+  font-weight: 600;   
+  font-size: 100%;
+}
+
+.checkout-btn{
+    margin: 10px;
+
+}
+
+.menu-item-card{
+    display:flex;
+    margin: 3px;
+    width: 28rem !important;
+    border-radius: 0px !important;
+    padding: 5px;
+}
+
+.remove-item-btn{
+    width: 10rem;
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}

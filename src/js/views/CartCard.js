@@ -15,24 +15,27 @@ export const CartCard = props => {
 	};
 
 	return (
-		<div className="card">
-			{/* <div className="card-header">Order Summary</div> */}
-			{/* <ul className="list-group list-group-flush"> */}
-			{/* {store.cart.map((cart, index) => (
+		<div className="row justify-content-center">
+			<div className="card menu-item-card">
+				{/* <div className="card-header">Order Summary</div> */}
+				{/* <ul className="list-group list-group-flush"> */}
+				{/* {store.cart.map((cart, index) => (
 					<li className="list-group-item" key={index} cart={cart} />
 				))} */}
-			{/* </ul> */}
-			<div>{currentCart.length === 0 && <div>Cart is empty</div>}</div>
-			<h5>
-				{props.index + 1}) {props.menuItem.item}
-			</h5>
-			<h6>${props.menuItem.price}</h6>
-			<button
-				onClick={() => {
-					removeFromCart(props.index);
-				}}>
-				Remove Item
-			</button>
+				{/* </ul> */}
+				<div>{currentCart.length === 0 && <div>Cart is empty</div>}</div>
+				<h6>
+					{props.index + 1}) {props.menuItem.item}
+				</h6>
+				<h6>${props.menuItem.price}</h6>
+				<button
+					className="btn btn-dark btn-small remove-item-btn"
+					onClick={() => {
+						removeFromCart(props.index);
+					}}>
+					Remove Item
+				</button>
+			</div>
 		</div>
 	);
 };
