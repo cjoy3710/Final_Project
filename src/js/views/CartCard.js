@@ -6,6 +6,19 @@ export const CartCard = props => {
 	// const [cart, setCart] = useState([]);
 	const { store, actions } = useContext(Context);
 	let currentCart = actions.getCart();
+	const [value, setValue] = useState("");
+	const [comment, setComment] = useState([]);
+
+	let handleSubmit = e => {
+		e.preventDefault();
+		addComment(value);
+		setValue("");
+	};
+
+	const addComment = text => {
+		const updatedComment = [...comment, { text }];
+		setComment(updatedComment);
+	};
 
 	// little change
 	// little change
@@ -27,18 +40,42 @@ export const CartCard = props => {
 				<h6 className="menu-item-text">
 					{props.index + 1}) {props.menuItem.item} ${props.menuItem.price}
 				</h6>
-
-				<button
-					className="btn btn-dark btn-small remove-item-btn"
-					onClick={() => {
-						removeFromCart(props.index);
-					}}>
-					Remove Item
-				</button>
+				<h6>${props.menuItem.price}</h6>
+				<div>
+					<form onSubmit={handleSubmit}>
+						<input
+							type="text"
+							className="input"
+							value={value}
+							placeholder="Special instructions..."
+							onChange={e => setValue(e.target.value)}
+						/>
+						{/* <button className="btn btn-primary" type="submit">
+							Enter
+						</button> */}
+						{comment.map((comment, index) => (
+							<span key={index}>
+								<div className="container">
+									<p className="text-center">
+										<strong>{comment.text}</strong>
+									</p>
+								</div>
+							</span>
+						))}
+					</form>
+					<button
+						className="btn btn-dark btn-small remove-item-btn"
+						onClick={() => {
+							removeFromCart(props.index);
+						}}>
+						Remove Item
+					</button>
+				</div>
 			</div>
 		</div>
 	);
 };
+
 CartCard.propTypes = {
 	menuItem: PropTypes.object,
 	index: PropTypes.number
