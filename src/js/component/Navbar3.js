@@ -27,7 +27,11 @@ export const Navbar3 = () => {
 			</Nav.Link>
 		);
 	} else {
-		logout = <Nav.Link href="/Login">Login / Sign-Up</Nav.Link>;
+		logout = (
+			<Nav.Link as={Link} to="/Login">
+				Login / Sign-Up
+			</Nav.Link>
+		);
 	}
 
 	return (
@@ -56,61 +60,7 @@ export const Navbar3 = () => {
 					<Nav.Link as={Link} to="/cart">
 						Cart ({currentCart.length})
 					</Nav.Link>
-					{/* </Nav>
-				<Nav> */}
-					{/* <Nav.Link href="#deets">More deets</Nav.Link> */}
-					{/* <Nav.Link eventKey={2} href="#memes">
-						Login / Sign-up
-					</Nav.Link> */}
 					{logout}
-					{/* <Modal show={show} onHide={handleClose}>
-						<Modal.Header closeButton> </Modal.Header>
-						<Carousel>
-							<Carousel.Item>
-								<img className="d-block w-100" src={RestImg1} alt="First slide" />
-								{/* <Carousel.Caption>
-					
-				</Carousel.Caption> */}
-					{/* </Carousel.Item>
-							<Carousel.Item>
-								<img className="d-block w-100" src={FoodImg1} alt="Third slide" /> */}
-					{/* <Carousel.Caption>
-					<h3>Second slide label</h3>
-				</Carousel.Caption> */}
-					{/* </Carousel.Item>
-							<Carousel.Item>
-								<img className="d-block w-100" src={FoodImg2} alt="Third slide" /> */}
-					{/* <Carousel.Caption>
-					<h3>Third slide label</h3>
-				</Carousel.Caption> */}
-					{/* </Carousel.Item>
-						</Carousel> */}
-					{/* <Modal.Title>Login Here</Modal.Title>
-						</Modal.Header>
-						<Modal.Body> */}
-					{/* <Form>
-								<Form.Group controlId="formBasicEmail">
-									<Form.Label>Email address</Form.Label>
-									<Form.Control type="email" placeholder="Enter email" />
-									<Form.Text className="text-muted">
-										Well never share your email with anyone else.
-									</Form.Text>
-								</Form.Group>
-
-								<Form.Group controlId="formBasicPassword">
-									<Form.Label>Password</Form.Label>
-									<Form.Control type="password" placeholder="Password" />
-								</Form.Group> */}
-					{/* <Form.Group controlId="formBasicCheckbox">
-								<Form.Check type="checkbox" label="Check me out" />
-							</Form.Group> */}
-					{/* <Button variant="primary" type="submit">
-									Login
-								</Button>
-							</Form>
-						</Modal.Body> */}
-					{/* <Modal.Footer /> */}
-					{/* </Modal> */}
 				</Nav>
 			</Navbar.Collapse>
 		</Navbar>
